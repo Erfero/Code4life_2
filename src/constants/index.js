@@ -173,7 +173,7 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-    "Je pensais qu'il était impossible de créer un site web aussi beau que notre produit, mais Rick m'a prouvé le contraire.",
+    "Je pensais qu'il était impossible de créer un site web aussi beau que notre produit, mais Erféro m'a prouvé le contraire.",
     name: "Sara Lee",
     designation: "CFO",
     company: "Acme Co",
@@ -181,7 +181,7 @@ const testimonials = [
   },
   {
     testimonial:
-    "Je n'ai jamais rencontré un développeur web qui se soucie autant du succès de ses clients que Rick.",
+    "Je n'ai jamais rencontré un développeur web qui se soucie autant du succès de ses clients que Erféro.",
     name: "Chris Brown",
     designation: "COO",
     company: "DEF Corp",
@@ -189,7 +189,7 @@ const testimonials = [
   },
   {
     testimonial:
-    "Après que Rick ait optimisé notre site web, notre trafic a augmenté de 50%. Nous ne le remercierons jamais assez!",
+    "Après que Erféro ait optimisé notre site web, notre trafic a augmenté de 50%. Nous ne le remercierons jamais assez!",
     name: "Lisa Wang",
     designation: "CTO",
     company: "456 Enterprises",
