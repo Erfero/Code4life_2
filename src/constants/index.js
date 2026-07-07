@@ -23,6 +23,7 @@ import {
   eliteBadge,
   omegaBadge,
   savageNoteBadge,
+  shotDashboardAnalyticsVue,
 } from "../assets";
 
 export const navLinks = [
@@ -309,18 +310,20 @@ const projects = [
       { name: "api", color: "accent-text-gradient" },
     ],
     badge: vue,
+    screenshot: shotDashboardAnalyticsVue,
+    externalLink: "https://dashboard-analytics-vue.vercel.app",
     isPersonal: true,
     context:
       "Projet personnel pour approfondir Vue.js côté frontend et la construction d'API côté backend, sur un cas d'usage concret : suivre des métriques business en temps réel.",
-    role: "Fullstack : frontend Vue.js + API Node.js/Express + modélisation des données.",
-    stack: ["Vue.js", "Node.js", "Express", "Chart.js", "MongoDB"],
+    role: "Fullstack : frontend Vue.js + API Node.js + modélisation des données.",
+    stack: ["Vue.js 3", "Chart.js", "API Node.js (Vercel Functions)", "Vercel"],
     features: [
       "Graphiques interactifs (courbes, barres, répartition) alimentés par une API REST",
       "Filtres par période et par catégorie avec mise à jour instantanée des graphiques",
       "Export des données filtrées en CSV",
-      "Authentification simple pour protéger l'accès au dashboard",
+      "Authentification simple pour protéger l'accès au dashboard (compte démo inclus)",
     ],
-    results: "Démonstrateur fonctionnel montrant ma capacité à livrer du fullstack Vue/Node de bout en bout.",
+    results: "En ligne et fonctionnel — connecte-toi avec le compte démo pour l'essayer.",
   },
   {
     slug: "panel-admin-angular",

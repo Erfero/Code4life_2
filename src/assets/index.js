@@ -30,6 +30,8 @@ import eliteBadge from "./company-badges/elite.svg";
 import omegaBadge from "./company-badges/omega.svg";
 import savageNoteBadge from "./company-badges/savagenote.svg";
 
+import shotDashboardAnalyticsVue from "./projects/dashboard-analytics-vue.png";
+
 export {
   backend,
   creator,
@@ -59,4 +61,5 @@ export {
   eliteBadge,
   omegaBadge,
   savageNoteBadge,
+  shotDashboardAnalyticsVue,
 };

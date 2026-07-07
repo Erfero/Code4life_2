@@ -7,7 +7,7 @@ import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import Logo from "./Logo";
 
-const ProjectCard = ({ index, slug, name, tagline, description, tags, badge, isPersonal }) => {
+const ProjectCard = ({ index, slug, name, tagline, description, tags, badge, screenshot, isPersonal }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", (index % 4) * 0.15, 0.75)}>
       <Tilt
@@ -16,11 +16,13 @@ const ProjectCard = ({ index, slug, name, tagline, description, tags, badge, isP
       >
         <div className="relative w-full h-[180px] rounded-2xl bg-accent-gradient flex items-center justify-center overflow-hidden">
           {isPersonal && (
-            <span className="absolute top-3 left-3 text-[11px] text-primary bg-accent font-semibold rounded-full px-3 py-1">
+            <span className="absolute top-3 left-3 text-[11px] text-primary bg-accent font-semibold rounded-full px-3 py-1 z-10">
               Projet personnel
             </span>
           )}
-          {badge === "logo" ? (
+          {screenshot ? (
+            <img src={screenshot} alt={name} className="w-full h-full object-cover object-top" />
+          ) : badge === "logo" ? (
             <Logo className="w-16 h-16" withBg={false} />
           ) : (
             <img src={badge} alt={name} className="w-16 h-16 rounded-2xl object-contain" />

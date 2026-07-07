@@ -24,6 +24,7 @@ const ProjectPage = () => {
     description,
     tags,
     badge,
+    screenshot,
     externalLink,
     isPersonal,
     context,
@@ -89,6 +90,12 @@ const ProjectPage = () => {
           >
             Voir en ligne ↗
           </a>
+        )}
+
+        {screenshot && (
+          <div className="mt-10 rounded-2xl overflow-hidden border border-white/10 shadow-card">
+            <img src={screenshot} alt={`Capture d'écran — ${name}`} className="w-full h-auto block" />
+          </div>
         )}
 
         <div className="mt-14 grid sm:grid-cols-2 gap-10">
