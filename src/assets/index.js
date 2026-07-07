@@ -31,6 +31,7 @@ import omegaBadge from "./company-badges/omega.svg";
 import savageNoteBadge from "./company-badges/savagenote.svg";
 
 import shotDashboardAnalyticsVue from "./projects/dashboard-analytics-vue.png";
+import shotPanelAdminAngular from "./projects/panel-admin-angular.png";
 
 export {
   backend,
@@ -62,4 +63,5 @@ export {
   omegaBadge,
   savageNoteBadge,
   shotDashboardAnalyticsVue,
+  shotPanelAdminAngular,
 };

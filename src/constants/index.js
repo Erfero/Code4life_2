@@ -24,6 +24,7 @@ import {
   omegaBadge,
   savageNoteBadge,
   shotDashboardAnalyticsVue,
+  shotPanelAdminAngular,
 } from "../assets";
 
 export const navLinks = [
@@ -334,21 +335,23 @@ const projects = [
     tags: [
       { name: "angular", color: "accent-text-gradient" },
       { name: "typescript", color: "neutral-text-gradient" },
-      { name: "rxjs", color: "accent-text-gradient" },
+      { name: "material", color: "accent-text-gradient" },
     ],
     badge: angular,
+    screenshot: shotPanelAdminAngular,
+    externalLink: "https://panel-admin-angular.vercel.app",
     isPersonal: true,
     context:
       "Projet personnel pour explorer Angular et TypeScript sur un cas classique mais exigeant : la gestion fine des droits d'accès dans une interface d'administration.",
-    role: "Développement frontend complet en Angular, architecture par modules.",
-    stack: ["Angular", "TypeScript", "RxJS", "Angular Material"],
+    role: "Développement frontend complet en Angular, architecture par composants standalone.",
+    stack: ["Angular 18", "TypeScript", "Angular Material", "Signals", "Vercel"],
     features: [
       "Gestion des utilisateurs avec rôles et permissions granulaires",
-      "Tableaux de données avec tri, pagination et recherche",
-      "Formulaires réactifs avec validation en temps réel",
-      "Architecture modulaire pensée pour scaler",
+      "Tableau de données avec tri, pagination et recherche en temps réel",
+      "Formulaires réactifs typés avec validation (nom, email, rôle, statut)",
+      "Matrice de permissions éditable par rôle et par module",
     ],
-    results: "Base solide réutilisable pour tout projet nécessitant un back-office robuste.",
+    results: "En ligne et fonctionnel — crée, modifie ou supprime un utilisateur pour le tester.",
   },
   {
     slug: "app-mobile-flutter",
