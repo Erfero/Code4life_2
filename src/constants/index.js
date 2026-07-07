@@ -25,6 +25,7 @@ import {
   savageNoteBadge,
   shotDashboardAnalyticsVue,
   shotPanelAdminAngular,
+  shotAppMobileFlutter,
 } from "../assets";
 
 export const navLinks = [
@@ -355,28 +356,30 @@ const projects = [
   },
   {
     slug: "app-mobile-flutter",
-    name: "Application mobile Flutter",
-    tagline: "Une seule base de code, iOS et Android",
+    name: "Code4Life Connect",
+    tagline: "Une seule base de code Flutter, messagerie en temps réel",
     description:
-      "Application mobile cross-platform avec authentification et synchronisation de données en temps réel via Firebase.",
+      "Application de messagerie d'équipe avec authentification et présence en ligne, compilée depuis une base de code Flutter unique (web ici, prête pour iOS/Android).",
     tags: [
       { name: "flutter", color: "accent-text-gradient" },
       { name: "dart", color: "neutral-text-gradient" },
-      { name: "firebase", color: "accent-text-gradient" },
+      { name: "streams", color: "accent-text-gradient" },
     ],
     badge: flutter,
+    screenshot: shotAppMobileFlutter,
+    externalLink: "https://appmobileflutter.vercel.app",
     isPersonal: true,
     context:
-      "Projet personnel pour étendre mes compétences fullstack au mobile : une seule base de code Flutter pour couvrir iOS et Android.",
-    role: "Développement mobile complet + intégration Firebase.",
-    stack: ["Flutter", "Dart", "Firebase Auth", "Cloud Firestore"],
+      "Projet personnel pour étendre mes compétences fullstack au mobile : une seule base de code Flutter pour couvrir web, iOS et Android.",
+    role: "Développement mobile complet : UI, authentification, architecture temps réel.",
+    stack: ["Flutter", "Dart", "Dart Streams", "Material 3", "Vercel"],
     features: [
-      "Authentification par email et réseaux sociaux via Firebase Auth",
-      "Synchronisation des données en temps réel avec Cloud Firestore",
-      "Interface adaptative pour différentes tailles d'écran",
-      "Notifications push",
+      "Authentification par email avec validation en temps réel",
+      "Messagerie d'équipe avec présence en ligne, via une architecture Streams prête pour un backend temps réel (type Firebase)",
+      "Interface adaptative, thème sombre cohérent avec l'identité Code4Life",
+      "Compilée pour le web depuis une base de code 100% partagée avec iOS/Android",
     ],
-    results: "Preuve concrète de ma capacité à livrer au-delà du web, sur mobile natif cross-platform.",
+    results: "En ligne et fonctionnel — connecte-toi avec le compte démo pour voir les messages arriver en direct.",
   },
   {
     slug: "api-laravel-gestion",

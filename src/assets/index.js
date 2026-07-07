@@ -32,6 +32,7 @@ import savageNoteBadge from "./company-badges/savagenote.svg";
 
 import shotDashboardAnalyticsVue from "./projects/dashboard-analytics-vue.png";
 import shotPanelAdminAngular from "./projects/panel-admin-angular.png";
+import shotAppMobileFlutter from "./projects/app-mobile-flutter.png";
 
 export {
   backend,
@@ -64,4 +65,5 @@ export {
   savageNoteBadge,
   shotDashboardAnalyticsVue,
   shotPanelAdminAngular,
+  shotAppMobileFlutter,
 };
