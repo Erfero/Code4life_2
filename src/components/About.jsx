@@ -8,13 +8,12 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, description, icon }) => {
   return (
-    <Tilt className="xs:w-[250px] w-full">
+    <Tilt options={{ max: 25, scale: 1, speed: 450 }} className="xs:w-[250px] w-full">
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className="w-full accent-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <div
-          options={{ max: 45, scale: 1, speed: 450 }}
           className="bg-tertiary rounded-[20px] py-5 px-8 min-h-[260px] flex justify-evenly items-center flex-col text-center"
         >
           <img src={icon} alt={title} className="w-16 h-16 object-contain" />
@@ -53,12 +52,12 @@ const About = () => {
 
         <motion.div variants={fadeIn("left", "spring", 0.3, 1)} className="lg:flex-[0.6] w-full">
           <p className="text-secondary text-[17px] max-w-3xl leading-[30px]">
-            Développeur Web Fullstack passionné, avec 5 ans d&apos;expérience en développement
-            et en rédaction web. Autonome, rigoureux et doté d&apos;un bon esprit d&apos;analyse, je
-            conçois des boutiques Shopify qui convertissent, des sites WordPress soignés et
-            des applications fullstack robustes (React, Node.js, Laravel). Mon objectif :
-            comprendre vos besoins et livrer une solution qui marche vraiment, sans y passer
-            des mois.
+            Développeur Web <span className="text-white font-semibold">Fullstack</span> avec 5
+            ans d&apos;expérience en production : je conçois des applications complètes, du
+            frontend (React, Vue, Angular) au backend (Node.js, Laravel, PHP) et à la base de
+            données. J&apos;interviens aussi sur Shopify, WordPress et le SEO — une double
+            compétence dev + référencement qui reste rare. Autonome, rigoureux, je comprends vos
+            besoins et je livre une solution qui marche vraiment, sans y passer des mois.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">

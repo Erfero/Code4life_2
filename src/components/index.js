@@ -9,6 +9,7 @@ import Works from "./Works";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 import Logo from "./Logo";
+import ProjectPage from "./ProjectPage";
 
 
 export {
@@ -22,6 +23,7 @@ export {
   Contact,
   CanvasLoader,
   Logo,
+  ProjectPage,
   EarthCanvas,
   BallCanvas,
   ComputersCanvas,

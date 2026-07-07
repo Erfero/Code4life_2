@@ -37,20 +37,20 @@ const Navbar = () => {
             Code4Life
           </p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden lg:flex flex-row gap-6 xl:gap-10 shrink-0">
           {navLinks.map((link) => (
             <li
               key={link.id}
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
-              } hover:text-accent text-[18px] font-medium cursor-pointer transition-colors`}
+              } hover:text-accent text-[16px] xl:text-[18px] font-medium cursor-pointer transition-colors whitespace-nowrap`}
               onClick={() => setActive(link.title)}
             >
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
         </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"

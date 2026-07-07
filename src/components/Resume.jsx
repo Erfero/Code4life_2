@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
-import { education, strengths, reference } from "../constants";
+import { education, strengths, reference, whyHireMe } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const Resume = () => {
@@ -21,7 +21,26 @@ const Resume = () => {
         (expériences, compétences, langues), le PDF reste la source la plus fiable.
       </motion.p>
 
-      <div className="mt-10 grid md:grid-cols-2 gap-8">
+      <motion.div variants={fadeIn("up", "spring", 0.15, 0.75)} className="mt-12">
+        <h3 className="font-heading font-bold text-white text-[24px] mb-6">
+          Pourquoi me recruter
+        </h3>
+        <div className="grid sm:grid-cols-2 gap-5">
+          {whyHireMe.map((item) => (
+            <div
+              key={item.title}
+              className="bg-tertiary rounded-2xl p-6 border border-white/10"
+            >
+              <p className="text-accent font-heading font-bold text-[16px] mb-2">
+                {item.title}
+              </p>
+              <p className="text-secondary text-[14px] leading-[22px]">{item.detail}</p>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+
+      <div className="mt-12 grid md:grid-cols-2 gap-8">
         <motion.div
           variants={fadeIn("right", "spring", 0.2, 0.75)}
           className="bg-tertiary rounded-2xl p-8 border border-white/10"
@@ -58,12 +77,13 @@ const Resume = () => {
 
           <div>
             <h3 className="text-white font-heading font-bold text-[16px] mb-2">
-              Référence professionnelle
+              Référence professionnelle vérifiable
             </h3>
             <p className="text-white text-[15px]">{reference.name}</p>
             <p className="text-secondary text-[13px]">{reference.role}</p>
-            <p className="text-secondary text-[13px]">
-              Coordonnées disponibles sur demande ou dans le CV ci-dessous.
+            <p className="text-secondary text-[13px] mt-1">
+              Coordonnées communiquées sur demande — n&apos;hésitez pas à vérifier mon parcours
+              directement auprès d&apos;elle.
             </p>
           </div>
         </motion.div>

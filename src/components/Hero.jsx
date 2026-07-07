@@ -7,20 +7,21 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
+        className={`${styles.paddingX} absolute inset-0 top-[100px] sm:top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-3 sm:gap-5`}
       >
-        <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-accent" />
-          <div className="w-1 sm:h-80 h-40 bg-gradient-to-b from-accent to-transparent" />
+        <div className="flex flex-col justify-center items-center mt-5 shrink-0">
+          <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-accent" />
+          <div className="w-1 sm:h-80 h-32 bg-gradient-to-b from-accent to-transparent" />
         </div>
-        <div>
+        <div className="min-w-0 flex-1">
           <h1 className={`${styles.heroHeadText} text-white`}>
             Erféro Keoula
             <span className="text-accent"> — Développeur Web Fullstack</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100 max-w-xl`}>
-            Shopify, React, Node.js, WordPress. <br className="sm:block hidden" />
-            5 ans à transformer des idées en produits web qui convertissent.
+            React, Node.js, Laravel : je conçois des applications fullstack de bout en
+            bout. <br className="sm:block hidden" />
+            5 ans d&apos;expérience à transformer des idées en produits web qui marchent.
           </p>
         </div>
       </div>
