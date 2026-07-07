@@ -91,7 +91,7 @@ const Resume = () => {
 
       <motion.div variants={fadeIn("up", "spring", 0.4, 0.75)} className="mt-10 flex justify-center">
         <a
-          href="/cv/erfero-keoula-cv.pdf"
+          href="/cv/CV-FULLSTACK.pdf"
           target="_blank"
           rel="noopener noreferrer"
           download
