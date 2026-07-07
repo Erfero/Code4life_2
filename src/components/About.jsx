@@ -1,52 +1,89 @@
-import React from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
-import { services } from "../constants";
+import { services, stats } from "../constants";
+import { profile } from "../assets";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => {
+const ServiceCard = ({ index, title, description, icon }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
-      <motion.div variants={fadeIn("right", "spring", 0.5 * index, 0.75)} className="w-full green-pink-gradient p-[1px] rounded-[20px] shadox-card">
+      <motion.div
+        variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
+        className="w-full accent-gradient p-[1px] rounded-[20px] shadow-card"
+      >
         <div
-          options={{
-            max: 45,
-            scale: 1,
-            speed: 450
-          }}
-          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+          options={{ max: 45, scale: 1, speed: 450 }}
+          className="bg-tertiary rounded-[20px] py-5 px-8 min-h-[260px] flex justify-evenly items-center flex-col text-center"
         >
           <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-          <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
+          <h3 className="text-white text-[20px] font-heading font-bold text-center">
+            {title}
+          </h3>
+          <p className="text-secondary text-[13px] text-center">{description}</p>
         </div>
-
       </motion.div>
     </Tilt>
-  )
-}
+  );
+};
 
 const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.heroSubText}>Introduction</p>
-        <h2 className={styles.heroHeadText }>Vue d'Ensemble.</h2>
+        <p className={styles.sectionSubText}>Qui suis-je</p>
+        <h2 className={styles.sectionHeadText}>À propos de moi.</h2>
       </motion.div>
 
-      <motion.p variants={fadeIn("", "", 0.1, 1)} className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-        Je suis un développeur de site et d'application web qualifié avec de l'expérience en TypeScript et JavaScript, et une expertise dans des frameworks tels que React, Node.js et Three.js. J'apprends rapidement et je collabore étroitement avec les clients pour créer des solutions efficaces, évolutives et conviviales qui résolvent des problèmes concrets. Travaillons ensemble pour donner vie à vos idées !
-      </motion.p>
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-14 flex lg:flex-row flex-col gap-10 items-center">
+        <motion.div
+          variants={fadeIn("right", "spring", 0.2, 1)}
+          className="lg:flex-[0.4] w-full flex justify-center"
+        >
+          <div className="relative w-full max-w-[380px]">
+            <div className="absolute -inset-2 rounded-[28px] bg-accent/20 blur-2xl" />
+            <img
+              src={profile}
+              alt="Erféro Keoula"
+              className="relative w-full rounded-[24px] object-cover border border-accent/40 shadow-card"
+            />
+          </div>
+        </motion.div>
+
+        <motion.div variants={fadeIn("left", "spring", 0.3, 1)} className="lg:flex-[0.6] w-full">
+          <p className="text-secondary text-[17px] max-w-3xl leading-[30px]">
+            Développeur Web Fullstack passionné, avec 5 ans d&apos;expérience en développement
+            et en rédaction web. Autonome, rigoureux et doté d&apos;un bon esprit d&apos;analyse, je
+            conçois des boutiques Shopify qui convertissent, des sites WordPress soignés et
+            des applications fullstack robustes (React, Node.js, Laravel). Mon objectif :
+            comprendre vos besoins et livrer une solution qui marche vraiment, sans y passer
+            des mois.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            {stats.map((stat) => (
+              <div
+                key={stat.label}
+                className="bg-tertiary border border-white/10 rounded-2xl px-6 py-4 min-w-[140px]"
+              >
+                <p className="text-accent font-heading font-bold text-[28px] leading-none">
+                  {stat.value}
+                </p>
+                <p className="text-secondary text-[13px] mt-1">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+
+      <div className="mt-20 flex flex-wrap gap-10 justify-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
-
       </div>
     </>
-  )
-}
+  );
+};
 
-
-export default SectionWrapper(About, "about")
+export default SectionWrapper(About, "about");

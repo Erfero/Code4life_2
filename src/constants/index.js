@@ -3,264 +3,226 @@ import {
   backend,
   creator,
   web,
-  javascript,
-  typescript,
   html,
   css,
+  javascript,
+  git,
   reactjs,
-  redux,
-  tailwind,
   nodejs,
   mongodb,
-  git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
+  vue,
+  angular,
+  wordpress,
+  flutter,
+  laravel,
+  php,
+  firebase,
+  seo,
+  viipBadge,
+  eliteBadge,
+  omegaBadge,
+  savageNoteBadge,
 } from "../assets";
 
 export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
+  { id: "about", title: "À propos" },
+  { id: "experience", title: "Expérience" },
+  { id: "resume", title: "CV" },
+  { id: "work", title: "Projets" },
+  { id: "contact", title: "Contact" },
+];
+
+const stats = [
+  { value: "5 ans", label: "d'expérience web" },
+  { value: "6", label: "expériences pro" },
+  { value: "11+", label: "technologies maîtrisées" },
 ];
 
 const services = [
   {
-    title:"Devéloppeur Web",
+    title: "Expert Shopify",
+    description: "Boutiques sur-mesure, pensées pour la conversion.",
     icon: web,
   },
   {
-    title: "Devéloppeur React Native",
-    icon: mobile,
-  },
-  {
-    title: "Devéloppeur Backend",
+    title: "Développeur Fullstack",
+    description: "React, Node.js, Laravel — du frontend à l'API.",
     icon: backend,
   },
   {
-    title: "Créateur de Contenue",
+    title: "Intégration WordPress",
+    description: "Sites rapides, sur-mesure, orientés expérience utilisateur.",
+    icon: mobile,
+  },
+  {
+    title: "SEO & Contenu",
+    description: "Rédaction et stratégie pour être visible sur Google.",
     icon: creator,
   },
 ];
 
 const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  { name: "Shopify", icon: shopify },
+  { name: "React.js", icon: reactjs },
+  { name: "Vue.js", icon: vue },
+  { name: "Angular", icon: angular },
+  { name: "WordPress", icon: wordpress },
+  { name: "Flutter", icon: flutter },
+  { name: "Node.js", icon: nodejs },
+  { name: "Laravel", icon: laravel },
+  { name: "PHP", icon: php },
+  { name: "MongoDB", icon: mongodb },
+  { name: "Firebase", icon: firebase },
+  { name: "SEO", icon: seo },
+  { name: "JavaScript", icon: javascript },
+  { name: "HTML 5", icon: html },
+  { name: "CSS 3", icon: css },
+  { name: "Git", icon: git },
 ];
 
 const experiences = [
   {
-    title: "Devéloppeur React.js",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    title: "Rédacteur Web SEO",
+    company_name: "Savage Note · Paris",
+    icon: savageNoteBadge,
+    iconBg: "#c2f24e",
+    date: "Sept. 2019 – Juil. 2023",
     points: [
-      "Développer et maintenir des applications web en utilisant React.js et d'autres technologies connexes.",
-      "Collaborer avec des équipes interfonctionnelles, y compris des designers, des chefs de produit et d'autres développeurs, pour créer des produits de haute qualité.",
-      "Implémenter un design réactif et assurer la compatibilité entre les navigateurs.",
-      "Participer aux revues de code et fournir des retours constructifs aux autres développeurs.",
+      "Rédaction d'articles de fond (700 à 1500 mots) optimisés pour le référencement naturel, pour des clients aux besoins variés.",
+      "Recherche de mots-clés et structuration éditoriale pour maximiser le classement sur Google.",
+      "Premier contact avec le web professionnel : le point de départ qui m'a mené vers le développement.",
     ],
   },
   {
-    title: "Devéloppeur React Native",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    title: "Développeur Shopify",
+    company_name: "Elite Agency · Bordeaux",
+    icon: eliteBadge,
+    iconBg: "#0d120d",
+    date: "Mai 2021 – Janv. 2024",
     points: [
-
-      "Développer et maintenir des applications web en utilisant React.js et d'autres technologies connexes.",
-      "Collaborer avec des équipes interfonctionnelles, y compris des designers, des chefs de produit et d'autres développeurs, pour créer des produits de haute qualité.",
-      "Implémenter un design réactif et assurer la compatibilité entre les navigateurs.",
-      "Participer aux revues de code et fournir des retours constructifs aux autres développeurs."
+      "Création de boutiques Shopify sur-mesure, optimisées pour la conversion.",
+      "Intégration de thèmes Liquid personnalisés et configuration d'applications pour automatiser la gestion des commandes.",
+      "Mise en place de stratégies SEO pour améliorer la visibilité sur Google et les réseaux sociaux.",
     ],
   },
   {
-    title: " Devéloppeur Web",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    title: "Développeur WordPress",
+    company_name: "Omega Agency · Paris",
+    icon: omegaBadge,
+    iconBg: "#c2f24e",
+    date: "Août 2022 – Janv. 2023",
     points: [
-      "Développer et maintenir des applications web en utilisant React.js et d'autres technologies connexes.",
-      "Collaborer avec des équipes interfonctionnelles, y compris des designers, des chefs de produit et d'autres développeurs, pour créer des produits de haute qualité.",
-      "Implémenter un design réactif et assurer la compatibilité entre les navigateurs.",
-      "Participer aux revues de code et fournir des retours constructifs aux autres développeurs.",
+      "Création et optimisation de sites WordPress orientés expérience utilisateur.",
+      "Personnalisation de thèmes et plugins pour répondre aux besoins spécifiques de chaque client.",
+      "Amélioration du référencement naturel (SEO) des sites livrés.",
     ],
   },
   {
-    title: "Devéloppeur Full stack",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    title: "Développeur Web Fullstack",
+    company_name: "Viip Interstis · Cotonou, Bénin",
+    icon: viipBadge,
+    iconBg: "#0d120d",
+    date: "Févr. 2023 – Mars 2025",
     points: [
-      "Développer et maintenir des applications web en utilisant React.js et d'autres technologies connexes.",
-      "Collaborer avec des équipes interfonctionnelles, y compris des designers, des chefs de produit et d'autres développeurs, pour créer des produits de haute qualité.",
-      "Implémenter un design réactif et assurer la compatibilité entre les navigateurs.",
-      "Participer aux revues de code et fournir des retours constructifs aux autres développeurs.",
+      "Conception d'une application omnicanale centralisant les réseaux sociaux de l'entreprise.",
+      "Développement d'un site et d'une application de monitoring pour la gestion des données internes.",
+      "Création d'un outil de gestion dédié aux équipes de téléconseillers et de développeurs.",
     ],
   },
 ];
 
-const testimonials = [
+const education = [
   {
-    testimonial:
-    "Je pensais qu'il était impossible de créer un site web aussi beau que notre produit, mais Erféro m'a prouvé le contraire.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    title: "Développeur Web Fullstack",
+    school: "High-Five University · Bénin",
+    date: "Depuis mars 2022 — 2 ans d'enseignement + 2 ans en entreprise",
   },
   {
-    testimonial:
-    "Je n'ai jamais rencontré un développeur web qui se soucie autant du succès de ses clients que Erféro.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-    "Après que Erféro ait optimisé notre site web, notre trafic a augmenté de 50%. Nous ne le remercierons jamais assez!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    title: "Licence pro · Sciences Naturelles",
+    school: "FAST Bénin",
+    date: "2019 – 2021 — Biologie, chimie, géologie",
   },
 ];
 
+const strengths = ["Communication", "Gestion de projet", "Souci du détail"];
+
+const reference = {
+  name: "Tiburce Kouagou",
+  role: "Formateur — High-Five University / Viip Interstis",
+  email: "tiburcekouagou@gmail.com",
+};
+
+const contactInfo = {
+  email: "erferokam@gmail.com",
+  phone: "+229 01 69 27 25 95",
+  phoneHref: "tel:+2290169272595",
+  whatsappHref: "https://wa.me/22969272595",
+  linkedinHref: "https://www.linkedin.com/in/erfero-keoula/",
+  portfolioHref: "https://code4life-2.vercel.app",
+};
+
+// Études de cas issues de mes vraies missions. Les projets clients n'ont pas
+// de lien public (NDA) : "link" reste vide tant qu'aucune URL réelle n'est fournie.
 const projects = [
   {
-    name: "Car Rent",
+    name: "Portfolio Code4Life",
     description:
-      "Une plateforme web qui permet aux utilisateurs de rechercher, réserver et gérer des locations de voitures auprès de divers fournisseurs, offrant une solution pratique et efficace pour leurs besoins de transport.",
+      "Mon site personnel : identité de marque, showcase de projets et prise de contact, construit en React, Three.js et Tailwind CSS.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
+      { name: "react", color: "accent-text-gradient" },
+      { name: "threejs", color: "neutral-text-gradient" },
+      { name: "tailwind", color: "accent-text-gradient" },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    badge: "logo",
+    link: "https://code4life-2.vercel.app",
   },
   {
-    name: "Job IT",
+    name: "Boutique Shopify sur-mesure",
     description:
-      "Une application web qui permet aux utilisateurs de rechercher des offres d'emploi, de consulter les fourchettes de salaire estimées pour les postes, et de localiser les emplois disponibles en fonction de leur emplacement actuel.",
+      "Conception d'une boutique Shopify sur-mesure pour un client d'Elite Agency, avec thème Liquid personnalisé et parcours d'achat optimisé pour la conversion.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
+      { name: "shopify", color: "accent-text-gradient" },
+      { name: "liquid", color: "neutral-text-gradient" },
+      { name: "seo", color: "accent-text-gradient" },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    badge: shopify,
+    link: "",
   },
   {
-    name: "Trip Guide",
+    name: "Suite d'outils internes",
     description:
-      "Une plateforme de réservation de voyage complète qui permet aux utilisateurs de réserver des vols, des hôtels et des voitures de location, et offre des recommandations soigneusement sélectionnées pour des destinations populaires.",
+      "Application omnicanale de centralisation des réseaux sociaux et outil de monitoring des données internes pour les équipes de Viip Interstis.",
     tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
+      { name: "fullstack", color: "accent-text-gradient" },
+      { name: "nodejs", color: "neutral-text-gradient" },
+      { name: "react", color: "accent-text-gradient" },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    badge: viipBadge,
+    link: "",
+  },
+  {
+    name: "Refonte WordPress UX & SEO",
+    description:
+      "Refonte de sites WordPress pour Omega Agency : thèmes et plugins personnalisés, expérience utilisateur repensée et référencement naturel amélioré.",
+    tags: [
+      { name: "wordpress", color: "accent-text-gradient" },
+      { name: "php", color: "neutral-text-gradient" },
+      { name: "seo", color: "accent-text-gradient" },
+    ],
+    badge: wordpress,
+    link: "",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export {
+  stats,
+  services,
+  technologies,
+  experiences,
+  education,
+  strengths,
+  reference,
+  contactInfo,
+  projects,
+};

@@ -6,6 +6,7 @@ import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
+import { contactInfo } from "../constants";
 
 
 const Contact = () => {
@@ -53,7 +54,7 @@ const Contact = () => {
       setLoading(false)
 
       console.log(error);
-      alert('Quelque chose ne vas pas avec ta logique.')
+      alert("Une erreur est survenue, réessayez ou contactez-moi directement par email.")
     })
   }
 
@@ -64,8 +65,43 @@ const Contact = () => {
       variants={slideIn('left', 'tween', 0.2, 1)}
       className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
-        <p className={styles.sectionSubText}>Contactez-nous</p>
-        <h3 className={styles.sectionHeadText}> Contact.</h3>
+        <p className={styles.sectionSubText}>Travaillons ensemble</p>
+        <h3 className={styles.sectionHeadText}>Parlons de votre projet.</h3>
+        <p className="mt-4 text-secondary text-[15px] max-w-lg">
+          Une idée, un besoin urgent, ou juste une question ? Écrivez-moi ou passez
+          directement par l&apos;un des canaux ci-dessous, je réponds vite.
+        </p>
+
+        <div className="mt-6 flex flex-wrap gap-3">
+          <a
+            href={`mailto:${contactInfo.email}`}
+            className="text-[13px] text-white border border-white/15 rounded-full px-4 py-2 hover:border-accent hover:text-accent transition-colors"
+          >
+            {contactInfo.email}
+          </a>
+          <a
+            href={contactInfo.whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[13px] text-white border border-white/15 rounded-full px-4 py-2 hover:border-accent hover:text-accent transition-colors"
+          >
+            WhatsApp
+          </a>
+          <a
+            href={contactInfo.phoneHref}
+            className="text-[13px] text-white border border-white/15 rounded-full px-4 py-2 hover:border-accent hover:text-accent transition-colors"
+          >
+            {contactInfo.phone}
+          </a>
+          <a
+            href={contactInfo.linkedinHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[13px] text-white border border-white/15 rounded-full px-4 py-2 hover:border-accent hover:text-accent transition-colors"
+          >
+            LinkedIn
+          </a>
+        </div>
 
         <form
         ref={formRef}
@@ -113,9 +149,9 @@ const Contact = () => {
           </label>
 
           <button
-           type="submit" className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+           type="submit" className="bg-accent text-primary py-3 px-8 outline-none w-fit font-heading font-bold shadow-md shadow-primary rounded-xl hover:opacity-90 transition-opacity"
           >
-            {loading ? 'En cours d\'envoi...' : 'Envoyez'}
+            {loading ? 'En cours d\'envoi...' : 'Envoyer'}
           </button>
         </form>
       </motion.div>

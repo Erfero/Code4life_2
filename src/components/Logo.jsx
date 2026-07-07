@@ -1,0 +1,37 @@
+const Logo = ({ className = "w-9 h-9", withBg = true }) => (
+  <svg
+    viewBox="0 0 40 40"
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+    role="img"
+    aria-label="Code4Life"
+  >
+    {withBg && <rect x="0" y="0" width="40" height="40" rx="11" fill="#0d120d" />}
+    <path
+      d="M14 12 L7 20 L14 28"
+      stroke="#c2f24e"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+    />
+    <path
+      d="M26 12 L33 20 L26 28"
+      stroke="#c2f24e"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+    />
+    <path
+      d="M15.5 20 L18 20 L19.5 14.5 L21.5 26 L23 20 L24.5 20"
+      stroke="#c2f24e"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+    />
+  </svg>
+);
+
+export default Logo;
