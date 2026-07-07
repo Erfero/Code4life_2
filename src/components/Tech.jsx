@@ -1,19 +1,38 @@
-import { BallCanvas } from "./canvas";
+import { motion } from "framer-motion";
+
 import { SectionWrapper } from "../hoc";
+import { styles } from "../styles";
 import { technologies } from "../constants";
+import { fadeIn, textVariant } from "../utils/motion";
 
 const Tech = () => {
   return (
-    <div className="flex flex-row flex-wrap justify-center gap-10">
-{technologies.map((technology) => (
-        <div className="w-28 h-28" key={technology.name}>
-          <BallCanvas icon={technology.icon} />
+    <>
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>Ma boîte à outils</p>
+        <h2 className={styles.sectionHeadText}>Technologies.</h2>
+      </motion.div>
 
-        </div>
-      ))}
-    </div>
-  )
-}
+      <div className="mt-14 grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-4 sm:gap-6">
+        {technologies.map((technology, index) => (
+          <motion.div
+            key={technology.name}
+            variants={fadeIn("up", "spring", (index % 6) * 0.08, 0.6)}
+            className="flex flex-col items-center gap-3 bg-tertiary border border-white/10 rounded-2xl py-6 px-3 hover:border-accent/40 transition-colors"
+          >
+            <img
+              src={technology.icon}
+              alt={technology.name}
+              className="w-12 h-12 sm:w-14 sm:h-14 object-contain rounded-xl"
+            />
+            <p className="text-white text-[13px] sm:text-[14px] font-medium text-center">
+              {technology.name}
+            </p>
+          </motion.div>
+        ))}
+      </div>
+    </>
+  );
+};
 
-
-export default SectionWrapper(Tech, "") 
+export default SectionWrapper(Tech, "tech");
