@@ -33,6 +33,7 @@ import savageNoteBadge from "./company-badges/savagenote.svg";
 import shotDashboardAnalyticsVue from "./projects/dashboard-analytics-vue.png";
 import shotPanelAdminAngular from "./projects/panel-admin-angular.png";
 import shotAppMobileFlutter from "./projects/app-mobile-flutter.png";
+import shotApiLaravelGestion from "./projects/api-laravel-gestion.png";
 
 export {
   backend,
@@ -66,4 +67,5 @@ export {
   shotDashboardAnalyticsVue,
   shotPanelAdminAngular,
   shotAppMobileFlutter,
+  shotApiLaravelGestion,
 };

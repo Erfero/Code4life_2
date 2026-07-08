@@ -26,6 +26,7 @@ import {
   shotDashboardAnalyticsVue,
   shotPanelAdminAngular,
   shotAppMobileFlutter,
+  shotApiLaravelGestion,
 } from "../assets";
 
 export const navLinks = [
@@ -384,27 +385,29 @@ const projects = [
   {
     slug: "api-laravel-gestion",
     name: "API de gestion Laravel",
-    tagline: "Backend robuste, authentification JWT",
+    tagline: "Backend robuste, authentification par token",
     description:
-      "API REST sécurisée pour un outil de gestion interne, avec authentification par token et gestion fine des rôles.",
+      "API REST sécurisée pour un outil de gestion de projets et tâches, avec authentification par token et gestion fine des rôles.",
     tags: [
       { name: "laravel", color: "accent-text-gradient" },
       { name: "php", color: "neutral-text-gradient" },
-      { name: "mysql", color: "accent-text-gradient" },
+      { name: "sanctum", color: "accent-text-gradient" },
     ],
     badge: laravel,
+    screenshot: shotApiLaravelGestion,
+    externalLink: "https://api-laravel-gestion.vercel.app",
     isPersonal: true,
     context:
-      "Projet personnel pour consolider mes compétences backend PHP/Laravel sur un cas exigeant : une API sécurisée destinée à être consommée par plusieurs clients (web et mobile).",
-    role: "Développement backend complet : modèles, migrations, authentification, endpoints.",
-    stack: ["Laravel", "PHP", "MySQL", "JWT", "API REST"],
+      "Projet personnel pour consolider mes compétences backend PHP/Laravel sur un cas exigeant : une API sécurisée destinée à être consommée par plusieurs clients (web et mobile), déployée en serverless sur Vercel.",
+    role: "Développement backend complet : modèles, migrations, authentification, endpoints, déploiement.",
+    stack: ["Laravel 12", "PHP", "Sanctum", "SQLite", "API REST", "Vercel"],
     features: [
-      "Authentification par token JWT et gestion des rôles utilisateurs",
-      "Endpoints REST versionnés et documentés",
-      "Validation stricte des données entrantes",
+      "Authentification par token (Laravel Sanctum) et gestion des rôles utilisateurs",
+      "Endpoints REST versionnés (projets, tâches) avec relations et pagination",
+      "Validation stricte des données entrantes via des Form Requests dédiées",
       "Migrations et seeders pour un déploiement reproductible",
     ],
-    results: "API prête à être consommée par un frontend web ou une application mobile.",
+    results: "En ligne et fonctionnel — teste la démo en direct (connexion + chargement des projets) sur la page du projet.",
   },
   {
     slug: "app-temps-reel-firebase",
