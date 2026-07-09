@@ -27,6 +27,7 @@ import {
   shotPanelAdminAngular,
   shotAppMobileFlutter,
   shotApiLaravelGestion,
+  shotAppTempsReelFirebase,
 } from "../assets";
 
 export const navLinks = [
@@ -411,28 +412,30 @@ const projects = [
   },
   {
     slug: "app-temps-reel-firebase",
-    name: "Application collaborative temps réel",
+    name: "Salle de discussion temps réel",
     tagline: "React + Firebase — messagerie instantanée",
     description:
-      "Application de messagerie et de collaboration en temps réel, avec présence utilisateur et synchronisation instantanée.",
+      "Salle de discussion multi-utilisateurs avec présence en ligne, synchronisée instantanément via Firestore.",
     tags: [
       { name: "react", color: "accent-text-gradient" },
       { name: "firebase", color: "neutral-text-gradient" },
       { name: "realtime", color: "accent-text-gradient" },
     ],
     badge: firebase,
+    screenshot: shotAppTempsReelFirebase,
+    externalLink: "https://app-temps-reel-firebase.vercel.app",
     isPersonal: true,
     context:
-      "Projet personnel pour maîtriser les architectures temps réel : messages, présence en ligne et mises à jour instantanées sans rechargement de page.",
-    role: "Fullstack : frontend React + Firebase Realtime Database / Firestore.",
-    stack: ["React", "Firebase Realtime Database", "Cloud Firestore", "Firebase Auth"],
+      "Projet personnel pour maîtriser les architectures temps réel : messages et présence en ligne synchronisés sans rechargement de page, entre tous les visiteurs connectés.",
+    role: "Fullstack : frontend React + Firebase (Firestore, Auth anonyme, règles de sécurité).",
+    stack: ["React", "Cloud Firestore", "Firebase Auth", "Vercel"],
     features: [
-      "Messagerie instantanée entre utilisateurs avec accusés de lecture",
-      "Indicateur de présence (en ligne / hors ligne) en temps réel",
-      "Synchronisation des données sans rechargement de page",
-      "Authentification et gestion de profils utilisateurs",
+      "Messagerie instantanée diffusée en direct à tous les visiteurs connectés",
+      "Indicateur de présence en ligne (battements réguliers, expiration automatique)",
+      "Authentification anonyme et règles de sécurité Firestore (lecture publique, écriture restreinte)",
+      "Synchronisation des données sans rechargement de page (onSnapshot)",
     ],
-    results: "Démontre ma maîtrise des architectures temps réel, au-delà du CRUD classique.",
+    results: "En ligne et fonctionnel — ouvre la page dans deux onglets pour voir la synchro en direct.",
   },
   {
     slug: "ecommerce-mern",

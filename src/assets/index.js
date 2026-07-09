@@ -34,6 +34,7 @@ import shotDashboardAnalyticsVue from "./projects/dashboard-analytics-vue.png";
 import shotPanelAdminAngular from "./projects/panel-admin-angular.png";
 import shotAppMobileFlutter from "./projects/app-mobile-flutter.png";
 import shotApiLaravelGestion from "./projects/api-laravel-gestion.png";
+import shotAppTempsReelFirebase from "./projects/app-temps-reel-firebase.png";
 
 export {
   backend,
@@ -68,4 +69,5 @@ export {
   shotPanelAdminAngular,
   shotAppMobileFlutter,
   shotApiLaravelGestion,
+  shotAppTempsReelFirebase,
 };
