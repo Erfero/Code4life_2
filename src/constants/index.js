@@ -28,6 +28,7 @@ import {
   shotAppMobileFlutter,
   shotApiLaravelGestion,
   shotAppTempsReelFirebase,
+  shotEcommerceMern,
 } from "../assets";
 
 export const navLinks = [
@@ -439,28 +440,30 @@ const projects = [
   },
   {
     slug: "ecommerce-mern",
-    name: "Plateforme e-commerce MERN",
-    tagline: "React, Node, MongoDB — du panier au paiement",
+    name: "Boutique en ligne MERN",
+    tagline: "React, Node, MongoDB — du catalogue à la commande",
     description:
-      "Site e-commerce complet : catalogue produits, panier, tunnel de commande et intégration de paiement.",
+      "Boutique e-commerce de bout en bout : catalogue produits en base, panier persistant, tunnel de commande complet (sans paiement réel).",
     tags: [
       { name: "react", color: "accent-text-gradient" },
       { name: "nodejs", color: "neutral-text-gradient" },
       { name: "mongodb", color: "accent-text-gradient" },
     ],
     badge: mongodb,
+    screenshot: shotEcommerceMern,
+    externalLink: "https://ecommerce-mern-steel.vercel.app",
     isPersonal: true,
     context:
-      "Projet personnel pour construire un e-commerce complet de bout en bout, sans passer par une plateforme no-code, afin de maîtriser chaque étape du tunnel de vente.",
-    role: "Fullstack MERN complet : catalogue, panier, commandes, paiement.",
-    stack: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
+      "Projet personnel pour construire un e-commerce complet de bout en bout, sans passer par une plateforme no-code, afin de maîtriser chaque étape du tunnel de vente jusqu'à la persistance en base.",
+    role: "Fullstack MERN complet : catalogue, panier, commandes, API REST.",
+    stack: ["React", "Node.js", "MongoDB", "Mongoose", "Vercel"],
     features: [
-      "Catalogue produits avec filtres et recherche",
-      "Panier persistant et tunnel de commande complet",
-      "Intégration d'une API de paiement",
-      "Espace administrateur pour gérer produits et commandes",
+      "Catalogue produits chargé depuis MongoDB, pages détail par produit",
+      "Panier persistant (localStorage) et tunnel de commande complet",
+      "Commande enregistrée en base avec décrément du stock côté serveur",
+      "API REST (fonctions serverless Node) : produits, commandes",
     ],
-    results: "Preuve que je peux livrer un e-commerce sur-mesure sans dépendre uniquement de Shopify.",
+    results: "En ligne et fonctionnel — ajoute un produit au panier et passe une commande de test.",
   },
 ];
 

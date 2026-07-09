@@ -35,6 +35,7 @@ import shotPanelAdminAngular from "./projects/panel-admin-angular.png";
 import shotAppMobileFlutter from "./projects/app-mobile-flutter.png";
 import shotApiLaravelGestion from "./projects/api-laravel-gestion.png";
 import shotAppTempsReelFirebase from "./projects/app-temps-reel-firebase.png";
+import shotEcommerceMern from "./projects/ecommerce-mern.png";
 
 export {
   backend,
@@ -70,4 +71,5 @@ export {
   shotAppMobileFlutter,
   shotApiLaravelGestion,
   shotAppTempsReelFirebase,
+  shotEcommerceMern,
 };
