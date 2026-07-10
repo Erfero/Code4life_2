@@ -19,6 +19,9 @@ import {
   php,
   firebase,
   seo,
+  nextjs,
+  nuxt,
+  nestjs,
   viipBadge,
   eliteBadge,
   omegaBadge,
@@ -98,9 +101,12 @@ const whyHireMe = [
 
 const technologies = [
   { name: "React.js", icon: reactjs },
+  { name: "Next.js", icon: nextjs },
   { name: "Vue.js", icon: vue },
+  { name: "Nuxt", icon: nuxt },
   { name: "Angular", icon: angular },
   { name: "Node.js", icon: nodejs },
+  { name: "NestJS", icon: nestjs },
   { name: "Laravel", icon: laravel },
   { name: "PHP", icon: php },
   { name: "MongoDB", icon: mongodb },
@@ -306,9 +312,9 @@ const projects = [
   {
     slug: "dashboard-analytics-vue",
     name: "Dashboard Analytics",
-    tagline: "Vue.js + API Node — visualisation de données en temps réel",
+    tagline: "Vue.js + API Node — pilotage business en temps réel",
     description:
-      "Tableau de bord analytique avec graphiques dynamiques, filtres et export de données, connecté à une API Node.js maison.",
+      "Dashboard analytique façon SaaS : navigation par sidebar, KPI avec tendances, graphiques et export, connecté à une API Node.js maison.",
     tags: [
       { name: "vuejs", color: "accent-text-gradient" },
       { name: "nodejs", color: "neutral-text-gradient" },
@@ -319,14 +325,14 @@ const projects = [
     externalLink: "https://dashboard-analytics-vue.vercel.app",
     isPersonal: true,
     context:
-      "Projet personnel pour approfondir Vue.js côté frontend et la construction d'API côté backend, sur un cas d'usage concret : suivre des métriques business en temps réel.",
+      "Projet personnel pour approfondir Vue.js côté frontend et la construction d'API côté backend, sur un cas d'usage concret : suivre des métriques business en temps réel avec une UI au niveau des vrais outils SaaS.",
     role: "Fullstack : frontend Vue.js + API Node.js + modélisation des données.",
     stack: ["Vue.js 3", "Chart.js", "API Node.js (Vercel Functions)", "Vercel"],
     features: [
-      "Graphiques interactifs (courbes, barres, répartition) alimentés par une API REST",
-      "Filtres par période et par catégorie avec mise à jour instantanée des graphiques",
-      "Export des données filtrées en CSV",
-      "Authentification simple pour protéger l'accès au dashboard (compte démo inclus)",
+      "Navigation par sidebar avec sections Ventes / Trafic / Inscriptions",
+      "Cartes KPI avec mini-graphiques et variation vs période précédente",
+      "Graphiques interactifs (courbes, barres, répartition) + tableau des meilleurs jours",
+      "Filtres par période, export CSV et authentification (compte démo inclus)",
     ],
     results: "En ligne et fonctionnel — connecte-toi avec le compte démo pour l'essayer.",
   },
@@ -360,9 +366,9 @@ const projects = [
   {
     slug: "app-mobile-flutter",
     name: "Code4Life Connect",
-    tagline: "Une seule base de code Flutter, messagerie en temps réel",
+    tagline: "Une seule base de code Flutter, messagerie multi-conversations",
     description:
-      "Application de messagerie d'équipe avec authentification et présence en ligne, compilée depuis une base de code Flutter unique (web ici, prête pour iOS/Android).",
+      "Messagerie d'équipe façon Slack : plusieurs conversations, présence en ligne, indicateur de saisie, interface adaptative desktop/mobile, compilée depuis une base de code Flutter unique.",
     tags: [
       { name: "flutter", color: "accent-text-gradient" },
       { name: "dart", color: "neutral-text-gradient" },
@@ -373,13 +379,13 @@ const projects = [
     externalLink: "https://appmobileflutter.vercel.app",
     isPersonal: true,
     context:
-      "Projet personnel pour étendre mes compétences fullstack au mobile : une seule base de code Flutter pour couvrir web, iOS et Android.",
-    role: "Développement mobile complet : UI, authentification, architecture temps réel.",
+      "Projet personnel pour étendre mes compétences fullstack au mobile : une seule base de code Flutter pour couvrir web, iOS et Android, avec une UI qui s'adapte vraiment à chaque taille d'écran plutôt qu'un simple format mobile étiré.",
+    role: "Développement mobile complet : UI adaptative, authentification, architecture temps réel.",
     stack: ["Flutter", "Dart", "Dart Streams", "Material 3", "Vercel"],
     features: [
-      "Authentification par email avec validation en temps réel",
-      "Messagerie d'équipe avec présence en ligne, via une architecture Streams prête pour un backend temps réel (type Firebase)",
-      "Interface adaptative, thème sombre cohérent avec l'identité Code4Life",
+      "Interface adaptative : 3 volets sur desktop (conversations, fil, profil), navigation mobile dédiée en dessous de 880px",
+      "4 conversations avec avatars, regroupement des messages et indicateur « en train d'écrire »",
+      "Présence en ligne et messagerie en direct, via une architecture Streams prête pour un backend temps réel (type Firebase)",
       "Compilée pour le web depuis une base de code 100% partagée avec iOS/Android",
     ],
     results: "En ligne et fonctionnel — connecte-toi avec le compte démo pour voir les messages arriver en direct.",

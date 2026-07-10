@@ -154,7 +154,7 @@ const Contact = () => {
             value={form.name}
             onChange={handleChange}
             placeholder="Quel est votre nom ?"
-            className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+            className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg border border-white/20 focus:border-accent focus:outline-none font-medium transition-colors"
             />
           </label>
           <label
@@ -169,7 +169,7 @@ const Contact = () => {
             value={form.email}
             onChange={handleChange}
             placeholder="Quel est votre email ?"
-            className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+            className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg border border-white/20 focus:border-accent focus:outline-none font-medium transition-colors"
             />
           </label>
           <label
@@ -184,7 +184,7 @@ const Contact = () => {
             value={form.message}
             onChange={handleChange}
             placeholder="Qu'est ce que vous voulez dire ou savoir ?"
-            className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+            className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg border border-white/20 focus:border-accent focus:outline-none font-medium transition-colors"
             />
           </label>
 
@@ -198,7 +198,7 @@ const Contact = () => {
 
       <motion.div
       variants={slideIn('right', "tween", 0.2, 1)}
-      className="xl:flex-1 xl:h-auto md:h-[500px] h-[350px] rounded-2xl overflow-hidden border border-white/10 bg-tertiary"
+      className="xl:flex-[1.15] xl:h-auto md:h-[560px] h-[400px] rounded-2xl overflow-hidden border border-white/10 bg-tertiary"
       >
         <EarthCanvas />
       </motion.div>

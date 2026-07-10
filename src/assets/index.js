@@ -24,6 +24,9 @@ import laravel from "./tech-badges/laravel.svg";
 import php from "./tech-badges/php.svg";
 import firebase from "./tech-badges/firebase.svg";
 import seo from "./tech-badges/seo.svg";
+import nextjs from "./tech-badges/nextjs.svg";
+import nuxt from "./tech-badges/nuxt.svg";
+import nestjs from "./tech-badges/nestjs.svg";
 
 import viipBadge from "./company-badges/viip.svg";
 import eliteBadge from "./company-badges/elite.svg";
@@ -62,6 +65,9 @@ export {
   php,
   firebase,
   seo,
+  nextjs,
+  nuxt,
+  nestjs,
   viipBadge,
   eliteBadge,
   omegaBadge,
