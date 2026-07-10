@@ -419,10 +419,10 @@ const projects = [
   },
   {
     slug: "app-temps-reel-firebase",
-    name: "Salle de discussion temps réel",
-    tagline: "React + Firebase — messagerie instantanée",
+    name: "Messagerie temps réel multi-canaux",
+    tagline: "React + Firebase — façon Slack, en direct",
     description:
-      "Salle de discussion multi-utilisateurs avec présence en ligne, synchronisée instantanément via Firestore.",
+      "Messagerie multi-canaux avec présence en ligne, interface 3 volets sur desktop, synchronisée instantanément via Firestore.",
     tags: [
       { name: "react", color: "accent-text-gradient" },
       { name: "firebase", color: "neutral-text-gradient" },
@@ -433,14 +433,14 @@ const projects = [
     externalLink: "https://app-temps-reel-firebase.vercel.app",
     isPersonal: true,
     context:
-      "Projet personnel pour maîtriser les architectures temps réel : messages et présence en ligne synchronisés sans rechargement de page, entre tous les visiteurs connectés.",
+      "Projet personnel pour maîtriser les architectures temps réel : messages et présence en ligne synchronisés sans rechargement de page, entre tous les visiteurs connectés, avec une UI multi-canaux façon Slack.",
     role: "Fullstack : frontend React + Firebase (Firestore, Auth anonyme, règles de sécurité).",
     stack: ["React", "Cloud Firestore", "Firebase Auth", "Vercel"],
     features: [
-      "Messagerie instantanée diffusée en direct à tous les visiteurs connectés",
+      "4 canaux de discussion avec aperçu du dernier message, avatars colorés par utilisateur",
+      "Interface 3 volets sur desktop (canaux, fil actif, présence), navigation dédiée sur mobile",
       "Indicateur de présence en ligne (battements réguliers, expiration automatique)",
       "Authentification anonyme et règles de sécurité Firestore (lecture publique, écriture restreinte)",
-      "Synchronisation des données sans rechargement de page (onSnapshot)",
     ],
     results: "En ligne et fonctionnel — ouvre la page dans deux onglets pour voir la synchro en direct.",
   },
