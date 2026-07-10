@@ -464,10 +464,10 @@ const projects = [
     role: "Fullstack MERN complet : catalogue, panier, commandes, API REST.",
     stack: ["React", "Node.js", "MongoDB", "Mongoose", "Vercel"],
     features: [
+      "Recherche, filtres par catégorie et favoris (persistants), produits similaires suggérés",
       "Catalogue produits chargé depuis MongoDB, pages détail par produit",
       "Panier persistant (localStorage) et tunnel de commande complet",
       "Commande enregistrée en base avec décrément du stock côté serveur",
-      "API REST (fonctions serverless Node) : produits, commandes",
     ],
     results: "En ligne et fonctionnel — ajoute un produit au panier et passe une commande de test.",
   },
