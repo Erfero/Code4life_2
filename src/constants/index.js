@@ -339,9 +339,9 @@ const projects = [
   {
     slug: "panel-admin-angular",
     name: "Panel d'administration Angular",
-    tagline: "Gestion des rôles et des permissions",
+    tagline: "Sidebar, KPI et gestion des rôles et permissions",
     description:
-      "Interface d'administration avec gestion des utilisateurs, rôles et permissions, construite en Angular.",
+      "Panel d'administration complet : connexion, vue d'ensemble avec statistiques, gestion des utilisateurs, rôles et permissions.",
     tags: [
       { name: "angular", color: "accent-text-gradient" },
       { name: "typescript", color: "neutral-text-gradient" },
@@ -352,14 +352,14 @@ const projects = [
     externalLink: "https://panel-admin-angular.vercel.app",
     isPersonal: true,
     context:
-      "Projet personnel pour explorer Angular et TypeScript sur un cas classique mais exigeant : la gestion fine des droits d'accès dans une interface d'administration.",
+      "Projet personnel pour explorer Angular et TypeScript sur un cas classique mais exigeant : la gestion fine des droits d'accès dans une interface d'administration au niveau d'un vrai produit SaaS.",
     role: "Développement frontend complet en Angular, architecture par composants standalone.",
     stack: ["Angular 18", "TypeScript", "Angular Material", "Signals", "Vercel"],
     features: [
+      "Authentification (route guard) et vue d'ensemble avec KPI et activité récente",
       "Gestion des utilisateurs avec rôles et permissions granulaires",
       "Tableau de données avec tri, pagination et recherche en temps réel",
-      "Formulaires réactifs typés avec validation (nom, email, rôle, statut)",
-      "Matrice de permissions éditable par rôle et par module",
+      "Formulaires réactifs typés + matrice de permissions éditable par rôle et par module",
     ],
     results: "En ligne et fonctionnel — crée, modifie ou supprime un utilisateur pour le tester.",
   },
@@ -392,10 +392,10 @@ const projects = [
   },
   {
     slug: "api-laravel-gestion",
-    name: "API de gestion Laravel",
-    tagline: "Backend robuste, authentification par token",
+    name: "Gestion de projets Laravel",
+    tagline: "API + interface complète, authentification par token",
     description:
-      "API REST sécurisée pour un outil de gestion de projets et tâches, avec authentification par token et gestion fine des rôles.",
+      "Application de gestion de projets et tâches avec une vraie interface (pas juste une API) : crée des projets, assigne des tâches, suis leur avancement.",
     tags: [
       { name: "laravel", color: "accent-text-gradient" },
       { name: "php", color: "neutral-text-gradient" },
@@ -406,14 +406,14 @@ const projects = [
     externalLink: "https://api-laravel-gestion.vercel.app",
     isPersonal: true,
     context:
-      "Projet personnel pour consolider mes compétences backend PHP/Laravel sur un cas exigeant : une API sécurisée destinée à être consommée par plusieurs clients (web et mobile), déployée en serverless sur Vercel.",
-    role: "Développement backend complet : modèles, migrations, authentification, endpoints, déploiement.",
+      "Projet personnel pour consolider mes compétences backend PHP/Laravel sur un cas exigeant : une API sécurisée consommée par une vraie interface, déployée en serverless sur Vercel.",
+    role: "Développement fullstack : API (modèles, migrations, authentification, endpoints) + interface consommant l'API.",
     stack: ["Laravel 12", "PHP", "Sanctum", "SQLite", "API REST", "Vercel"],
     features: [
+      "Interface complète (pas de doc statique) : connexion, projets, tâches, tout piloté via l'API",
       "Authentification par token (Laravel Sanctum) et gestion des rôles utilisateurs",
-      "Endpoints REST versionnés (projets, tâches) avec relations et pagination",
-      "Validation stricte des données entrantes via des Form Requests dédiées",
-      "Migrations et seeders pour un déploiement reproductible",
+      "Cycle de statut des tâches en un clic, création/suppression de projets et tâches",
+      "Endpoints REST versionnés avec relations, pagination et Form Requests dédiées",
     ],
     results: "En ligne et fonctionnel — teste la démo en direct (connexion + chargement des projets) sur la page du projet.",
   },
