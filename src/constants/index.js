@@ -471,6 +471,33 @@ const projects = [
     ],
     results: "En ligne et fonctionnel — ajoute un produit au panier et passe une commande de test.",
   },
+  {
+    slug: "booking-nextjs",
+    name: "Prise de rendez-vous en ligne",
+    tagline: "Next.js — réservation de créneaux en temps réel",
+    description:
+      "Système de prise de rendez-vous complet : choix de prestation, créneaux disponibles en temps réel, confirmation, vue admin.",
+    tags: [
+      { name: "nextjs", color: "accent-text-gradient" },
+      { name: "typescript", color: "neutral-text-gradient" },
+      { name: "mongodb", color: "accent-text-gradient" },
+    ],
+    badge: nextjs,
+    screenshot: shotBookingNextjs,
+    externalLink: "https://booking-nextjs-nine.vercel.app",
+    isPersonal: true,
+    context:
+      "Projet personnel pour maîtriser Next.js (App Router, Route Handlers, TypeScript) sur un cas très concret et réutilisable : la prise de rendez-vous en ligne, un besoin réel pour des indépendants ou petites structures.",
+    role: "Fullstack Next.js : API (Route Handlers, MongoDB), UI du parcours de réservation, vue admin.",
+    stack: ["Next.js", "TypeScript", "MongoDB", "Mongoose", "Vercel"],
+    features: [
+      "Parcours en 4 étapes : prestation, date, créneau disponible, coordonnées",
+      "Disponibilité calculée en temps réel (jours ouvrés, créneaux déjà pris exclus)",
+      "Index unique en base pour empêcher tout double-réservation d'un créneau",
+      "Vue admin protégée par clé d'accès listant toutes les réservations",
+    ],
+    results: "En ligne et fonctionnel — réserve un créneau de test pour voir le parcours complet.",
+  },
 ];
 
 export {
