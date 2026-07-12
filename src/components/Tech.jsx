@@ -2,15 +2,19 @@ import { motion } from "framer-motion";
 
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
-import { technologies } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { useContent } from "../hooks/useContent";
+import { useTranslation } from "../i18n/useTranslation";
 
 const Tech = () => {
+  const { technologies } = useContent();
+  const { t } = useTranslation();
+
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Ma boîte à outils</p>
-        <h2 className={styles.sectionHeadText}>Technologies.</h2>
+        <p className={styles.sectionSubText}>{t("tech.eyebrow")}</p>
+        <h2 className={styles.sectionHeadText}>{t("tech.title")}</h2>
       </motion.div>
 
       <div className="mt-14 grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-4 sm:gap-6">

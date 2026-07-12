@@ -2,9 +2,10 @@ import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
-import { services, stats } from "../constants";
 import { profile } from "../assets";
 import { fadeIn, textVariant } from "../utils/motion";
+import { useContent } from "../hooks/useContent";
+import { useTranslation } from "../i18n/useTranslation";
 
 const ServiceCard = ({ index, title, description, icon }) => {
   return (
@@ -28,11 +29,14 @@ const ServiceCard = ({ index, title, description, icon }) => {
 };
 
 const About = () => {
+  const { services, stats } = useContent();
+  const { t } = useTranslation();
+
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Qui suis-je</p>
-        <h2 className={styles.sectionHeadText}>À propos de moi.</h2>
+        <p className={styles.sectionSubText}>{t("about.eyebrow")}</p>
+        <h2 className={styles.sectionHeadText}>{t("about.title")}</h2>
       </motion.div>
 
       <div className="mt-14 flex lg:flex-row flex-col gap-10 items-center">
@@ -51,14 +55,7 @@ const About = () => {
         </motion.div>
 
         <motion.div variants={fadeIn("left", "spring", 0.3, 1)} className="lg:flex-[0.6] w-full">
-          <p className="text-secondary text-[17px] max-w-3xl leading-[30px]">
-            Développeur Web <span className="text-white font-semibold">Fullstack</span> avec 5
-            ans d&apos;expérience en production : je conçois des applications complètes, du
-            frontend (React, Vue, Angular) au backend (Node.js, Laravel, PHP) et à la base de
-            données. J&apos;interviens aussi sur Shopify, WordPress et le SEO — une double
-            compétence dev + référencement qui reste rare. Autonome, rigoureux, je comprends vos
-            besoins et je livre une solution qui marche vraiment, sans y passer des mois.
-          </p>
+          <p className="text-secondary text-[17px] max-w-3xl leading-[30px]">{t("about.bio")}</p>
 
           <div className="mt-8 flex flex-wrap gap-4">
             {stats.map((stat) => (

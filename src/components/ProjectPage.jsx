@@ -1,18 +1,21 @@
 import { useParams, Link } from "react-router-dom";
 
-import { projects } from "../constants";
 import Logo from "./Logo";
+import { useContent } from "../hooks/useContent";
+import { useTranslation } from "../i18n/useTranslation";
 
 const ProjectPage = () => {
   const { slug } = useParams();
+  const { projects } = useContent();
+  const { t } = useTranslation();
   const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     return (
       <div className="min-h-screen bg-primary flex flex-col items-center justify-center gap-4 px-6 text-center">
-        <p className="text-white font-heading text-[24px]">Projet introuvable.</p>
+        <p className="text-white font-heading text-[24px]">{t("projectPage.notFound")}</p>
         <Link to="/" className="text-accent underline">
-          Retour au portfolio
+          {t("projectPage.backHome")}
         </Link>
       </div>
     );
@@ -45,7 +48,7 @@ const ProjectPage = () => {
 
       <div className="max-w-4xl mx-auto px-6 sm:px-10 py-14">
         <Link to="/" className="text-secondary hover:text-accent text-[14px]">
-          ← Retour au portfolio
+          {t("projectPage.backLink")}
         </Link>
 
         <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-6">
@@ -59,7 +62,7 @@ const ProjectPage = () => {
           <div>
             {isPersonal && (
               <span className="inline-block text-[12px] text-accent border border-accent/40 rounded-full px-3 py-1 mb-2">
-                Projet personnel
+                {t("works.personalBadge")}
               </span>
             )}
             <h1 className="font-heading font-bold text-white text-[32px] sm:text-[44px] leading-tight">
@@ -88,29 +91,29 @@ const ProjectPage = () => {
             rel="noopener noreferrer"
             className="mt-6 inline-block text-primary bg-accent font-heading font-semibold text-[15px] px-6 py-3 rounded-xl hover:opacity-90 transition-opacity"
           >
-            Voir en ligne ↗
+            {t("projectPage.viewLive")}
           </a>
         )}
 
         {screenshot && (
           <div className="mt-10 rounded-2xl overflow-hidden border border-white/10 shadow-card">
-            <img src={screenshot} alt={`Capture d'écran — ${name}`} className="w-full h-auto block" />
+            <img src={screenshot} alt={`${t("projectPage.screenshotAlt")}${name}`} className="w-full h-auto block" />
           </div>
         )}
 
         <div className="mt-14 grid sm:grid-cols-2 gap-10">
           <div>
-            <h2 className="font-heading font-bold text-white text-[20px] mb-3">Contexte</h2>
+            <h2 className="font-heading font-bold text-white text-[20px] mb-3">{t("projectPage.context")}</h2>
             <p className="text-secondary text-[15px] leading-[26px]">{context}</p>
           </div>
           <div>
-            <h2 className="font-heading font-bold text-white text-[20px] mb-3">Mon rôle</h2>
+            <h2 className="font-heading font-bold text-white text-[20px] mb-3">{t("projectPage.role")}</h2>
             <p className="text-secondary text-[15px] leading-[26px]">{role}</p>
           </div>
         </div>
 
         <div className="mt-10">
-          <h2 className="font-heading font-bold text-white text-[20px] mb-4">Fonctionnalités clés</h2>
+          <h2 className="font-heading font-bold text-white text-[20px] mb-4">{t("projectPage.features")}</h2>
           <ul className="list-disc ml-5 space-y-2">
             {features.map((feature) => (
               <li key={feature} className="text-secondary text-[15px] leading-[26px]">
@@ -121,7 +124,7 @@ const ProjectPage = () => {
         </div>
 
         <div className="mt-10">
-          <h2 className="font-heading font-bold text-white text-[20px] mb-4">Stack technique</h2>
+          <h2 className="font-heading font-bold text-white text-[20px] mb-4">{t("projectPage.stack")}</h2>
           <div className="flex flex-wrap gap-2">
             {stack.map((tech) => (
               <span
@@ -135,7 +138,7 @@ const ProjectPage = () => {
         </div>
 
         <div className="mt-10 bg-tertiary border border-white/10 rounded-2xl p-6">
-          <h2 className="font-heading font-bold text-accent text-[18px] mb-2">Résultat</h2>
+          <h2 className="font-heading font-bold text-accent text-[18px] mb-2">{t("projectPage.result")}</h2>
           <p className="text-white text-[15px] leading-[26px]">{results}</p>
         </div>
 
@@ -144,7 +147,7 @@ const ProjectPage = () => {
             to="/#contact"
             className="text-accent border border-accent/40 font-semibold text-[14px] px-6 py-3 rounded-xl hover:bg-accent/10 transition-colors"
           >
-            Discuter d&apos;un projet similaire
+            {t("projectPage.ctaSimilar")}
           </Link>
         </div>
       </div>

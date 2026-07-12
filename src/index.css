@@ -4,13 +4,39 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: 5 7 5;
+  --color-secondary: 169 179 163;
+  --color-tertiary: 13 18 13;
+  --color-accent: 194 242 78;
+  --color-accent-soft: 220 238 182;
+  --color-black-100: 18 18 18;
+  --color-black-200: 7 10 7;
+  --color-white-100: 238 243 238;
+
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --color-primary: 251 253 249;
+  --color-secondary: 88 97 82;
+  --color-tertiary: 241 245 235;
+  --color-accent: 92 138 20;
+  --color-accent-soft: 122 140 60;
+  --color-black-100: 235 239 229;
+  --color-black-200: 224 229 216;
+  --color-white-100: 20 26 18;
+
+  color-scheme: light;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
   scroll-behavior: smooth;
-  color-scheme: dark;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,6 +68,10 @@ html, body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+:root[data-theme="light"] .black-gradient {
+  background: linear-gradient(to right, #ffffff, #eef2e6);
+}
+
 .accent-gradient {
   background: #c2f24e;
   background: linear-gradient(-90deg, #c2f24e 0%, rgba(18, 24, 18, 0) 100%);
@@ -52,10 +82,21 @@ html, body {
   );
 }
 
+:root[data-theme="light"] .accent-gradient {
+  background: linear-gradient(-90deg, #5c8a14 0%, rgba(241, 245, 235, 0) 100%);
+}
+
 .accent-text-gradient {
   background: #c2f24e;
   background: -webkit-linear-gradient(to top, #8bb52e, #c2f24e);
   background: linear-gradient(to top, #8bb52e, #c2f24e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+:root[data-theme="light"] .accent-text-gradient {
+  background: -webkit-linear-gradient(to top, #3f5c0f, #5c8a14);
+  background: linear-gradient(to top, #3f5c0f, #5c8a14);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -66,6 +107,46 @@ html, body {
   background: linear-gradient(to top, #8b9585, #dceeb6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+:root[data-theme="light"] .neutral-text-gradient {
+  background: -webkit-linear-gradient(to top, #4a5242, #7c8870);
+  background: linear-gradient(to top, #4a5242, #7c8870);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Light-theme overrides for literal (non-tokenized) Tailwind utilities
+   used throughout the components — higher specificity than the plain
+   utility class lets us re-theme them without touching every file. */
+:root[data-theme="light"] .text-white {
+  color: #12180f;
+}
+
+:root[data-theme="light"] .border-white\/5 {
+  border-color: rgb(18 24 15 / 0.06);
+}
+:root[data-theme="light"] .border-white\/10 {
+  border-color: rgb(18 24 15 / 0.1);
+}
+:root[data-theme="light"] .border-white\/15 {
+  border-color: rgb(18 24 15 / 0.14);
+}
+:root[data-theme="light"] .border-white\/20 {
+  border-color: rgb(18 24 15 / 0.18);
+}
+:root[data-theme="light"] .border-white\/40 {
+  border-color: rgb(18 24 15 / 0.3);
+}
+
+:root[data-theme="light"] .bg-white\/5 {
+  background-color: rgb(18 24 15 / 0.04);
+}
+:root[data-theme="light"] .bg-white\/10 {
+  background-color: rgb(18 24 15 / 0.06);
+}
+:root[data-theme="light"] .bg-white\/15 {
+  background-color: rgb(18 24 15 / 0.08);
 }
 
 /* canvas- styles */

@@ -6,7 +6,8 @@ import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import SimpleLoader from "./SimpleLoader";
 import { slideIn } from "../utils/motion";
-import { contactInfo } from "../constants";
+import { useContent } from "../hooks/useContent";
+import { useTranslation } from "../i18n/useTranslation";
 
 const EarthCanvas = lazy(() => import("./canvas/Earth"));
 
@@ -70,6 +71,8 @@ const ContactChip = ({ href, target, icon: Icon, label }) => (
 );
 
 const Contact = () => {
+  const { contactInfo } = useContent();
+  const { t } = useTranslation();
 
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -103,7 +106,7 @@ const Contact = () => {
     )
     .then(() => {
       setLoading(false);
-      alert("Merci. Je vous recontacterai dès que possible.");
+      alert(t("contact.successAlert"));
 
       setForm({
         name: '',
@@ -114,7 +117,7 @@ const Contact = () => {
       setLoading(false)
 
       console.log(error);
-      alert("Une erreur est survenue, réessayez ou contactez-moi directement par email.")
+      alert(t("contact.errorAlert"))
     })
   }
 
@@ -125,11 +128,10 @@ const Contact = () => {
       variants={slideIn('left', 'tween', 0.2, 1)}
       className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
-        <p className={styles.sectionSubText}>Travaillons ensemble</p>
-        <h3 className={styles.sectionHeadText}>Parlons de votre projet.</h3>
+        <p className={styles.sectionSubText}>{t("contact.eyebrow")}</p>
+        <h3 className={styles.sectionHeadText}>{t("contact.title")}</h3>
         <p className="mt-4 text-secondary text-[15px] max-w-lg">
-          Une idée, un besoin urgent, ou juste une question ? Écrivez-moi ou passez
-          directement par l&apos;un des canaux ci-dessous, je réponds vite.
+          {t("contact.intro")}
         </p>
 
         <div className="mt-6 flex flex-wrap gap-3">
@@ -148,14 +150,14 @@ const Contact = () => {
           className="flex flex-col"
           >
             <span className="flex items-center gap-2 text-white font-medium mb-4">
-              <UserIcon /> Votre Nom :
+              <UserIcon /> {t("contact.nameLabel")}
             </span>
             <input
-            type="text" 
+            type="text"
             name = "name"
             value={form.name}
             onChange={handleChange}
-            placeholder="Quel est votre nom ?"
+            placeholder={t("contact.namePlaceholder")}
             className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg border border-white/20 focus:border-accent focus:outline-none font-medium transition-colors"
             />
           </label>
@@ -163,14 +165,14 @@ const Contact = () => {
           className="flex flex-col"
           >
             <span className="flex items-center gap-2 text-white font-medium mb-4">
-              <MailIcon /> Votre Email :
+              <MailIcon /> {t("contact.emailLabel")}
             </span>
             <input
-            type="email" 
+            type="email"
             name = "email"
             value={form.email}
             onChange={handleChange}
-            placeholder="Quel est votre email ?"
+            placeholder={t("contact.emailPlaceholder")}
             className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg border border-white/20 focus:border-accent focus:outline-none font-medium transition-colors"
             />
           </label>
@@ -178,14 +180,14 @@ const Contact = () => {
           className="flex flex-col"
           >
             <span className="flex items-center gap-2 text-white font-medium mb-4">
-              <MessageIcon /> Votre Message :
+              <MessageIcon /> {t("contact.messageLabel")}
             </span>
             <textarea
-            rows="7" 
+            rows="7"
             name = "message"
             value={form.message}
             onChange={handleChange}
-            placeholder="Qu'est ce que vous voulez dire ou savoir ?"
+            placeholder={t("contact.messagePlaceholder")}
             className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg border border-white/20 focus:border-accent focus:outline-none font-medium transition-colors"
             />
           </label>
@@ -193,7 +195,7 @@ const Contact = () => {
           <button
            type="submit" className="bg-accent text-primary py-3 px-8 outline-none w-fit font-heading font-bold shadow-md shadow-primary rounded-xl hover:opacity-90 transition-opacity"
           >
-            {loading ? 'En cours d\'envoi...' : 'Envoyer'}
+            {loading ? t("contact.sending") : t("contact.send")}
           </button>
         </form>
       </motion.div>

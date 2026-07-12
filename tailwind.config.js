@@ -5,14 +5,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#050705",
-        secondary: "#a9b3a3",
-        tertiary: "#0d120d",
-        accent: "#c2f24e",
-        "accent-soft": "#dceeb6",
-        "black-100": "#121212",
-        "black-200": "#070a07",
-        "white-100": "#eef3ec",
+        primary: "rgb(var(--color-primary) / <alpha-value>)",
+        secondary: "rgb(var(--color-secondary) / <alpha-value>)",
+        tertiary: "rgb(var(--color-tertiary) / <alpha-value>)",
+        accent: "rgb(var(--color-accent) / <alpha-value>)",
+        "accent-soft": "rgb(var(--color-accent-soft) / <alpha-value>)",
+        "black-100": "rgb(var(--color-black-100) / <alpha-value>)",
+        "black-200": "rgb(var(--color-black-200) / <alpha-value>)",
+        "white-100": "rgb(var(--color-white-100) / <alpha-value>)",
       },
       fontFamily: {
         heading: ["Space Grotesk", "sans-serif"],
@@ -26,7 +26,7 @@ module.exports = {
       },
       backgroundImage: {
         "hero-pattern":
-          "radial-gradient(circle at 15% 10%, rgba(194,242,78,0.12), transparent 45%), radial-gradient(circle at 85% 25%, rgba(194,242,78,0.08), transparent 40%), #050705",
+          "radial-gradient(circle at 15% 10%, rgb(var(--color-accent) / 0.12), transparent 45%), radial-gradient(circle at 85% 25%, rgb(var(--color-accent) / 0.08), transparent 40%), rgb(var(--color-primary))",
       },
     },
   },

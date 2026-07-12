@@ -3,14 +3,21 @@ import { motion } from "framer-motion";
 import 'react-vertical-timeline-component/style.min.css';
 
 import { styles } from "../styles";
-import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import { useTheme } from "../context/ThemeContext";
+import { useContent } from "../hooks/useContent";
+import { useTranslation } from "../i18n/useTranslation";
 
-const ExperienceCard = ({ experience }) => (
+const ExperienceCard = ({ experience }) => {
+  const { theme } = useTheme();
+  const cardBg = theme === "light" ? "#f1f5eb" : "#121212";
+  const cardText = theme === "light" ? "#12180f" : "#fff";
+
+  return (
   <VerticalTimelineElement
-    contentStyle={{ background: "#121212", color: "#fff" }}
-    contentArrowStyle={{ borderRight: "7px solid #121212" }}
+    contentStyle={{ background: cardBg, color: cardText }}
+    contentArrowStyle={{ borderRight: `7px solid ${cardBg}` }}
     date={experience.date}
     iconStyle={{ background: experience.iconBg }}
     icon={
@@ -36,14 +43,18 @@ const ExperienceCard = ({ experience }) => (
 
     </ul>
   </VerticalTimelineElement>
-)
+  );
+};
 
 const Experience = () => {
+  const { experiences } = useContent();
+  const { t } = useTranslation();
+
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Mon parcours</p>
-        <h2 className={styles.sectionHeadText}>Expérience Professionnelle.</h2>
+        <p className={styles.sectionSubText}>{t("experience.eyebrow")}</p>
+        <h2 className={styles.sectionHeadText}>{t("experience.title")}</h2>
       </motion.div>
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>

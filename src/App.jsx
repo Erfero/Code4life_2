@@ -1,6 +1,8 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { About, Contact, Experience, Resume, Hero, Navbar, Tech, Works, ProjectPage } from "./components";
+import { ThemeProvider } from "./context/ThemeContext";
+import { LanguageProvider } from "./context/LanguageContext";
 
 const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 
@@ -26,12 +28,16 @@ const HomePage = () => (
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/projects/:slug" element={<ProjectPage />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider>
+      <LanguageProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects/:slug" element={<ProjectPage />} />
+          </Routes>
+        </BrowserRouter>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 };
 

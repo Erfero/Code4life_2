@@ -3,10 +3,13 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import SimpleLoader from "./SimpleLoader";
+import { useTranslation } from "../i18n/useTranslation";
 
 const ComputersCanvas = lazy(() => import("./canvas/Computers"));
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
@@ -19,12 +22,11 @@ const Hero = () => {
         <div className="min-w-0 flex-1">
           <h1 className={`${styles.heroHeadText} text-white`}>
             Erféro Keoula
-            <span className="text-accent"> — Développeur Web Fullstack</span>
+            <span className="text-accent">{t("hero.title2")}</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100 max-w-xl`}>
-            React, Node.js, Laravel : je conçois des applications fullstack de bout en
-            bout. <br className="sm:block hidden" />
-            5 ans d&apos;expérience à transformer des idées en produits web qui marchent.
+            {t("hero.subtitle1")} <br className="sm:block hidden" />
+            {t("hero.subtitle2")}
           </p>
         </div>
       </div>

@@ -3,11 +3,12 @@ import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 
-import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import Logo from "./Logo";
+import { useContent } from "../hooks/useContent";
+import { useTranslation } from "../i18n/useTranslation";
 
-const ProjectCard = ({ index, slug, name, tagline, description, tags, badge, screenshot, isPersonal }) => {
+const ProjectCard = ({ index, slug, name, tagline, description, tags, badge, screenshot, isPersonal, t }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", (index % 4) * 0.15, 0.75)}>
       <Tilt
@@ -23,7 +24,7 @@ const ProjectCard = ({ index, slug, name, tagline, description, tags, badge, scr
           <div className="relative w-full h-[180px] rounded-2xl bg-accent-gradient flex items-center justify-center overflow-hidden">
             {isPersonal && (
               <span className="absolute top-3 left-3 text-[11px] text-primary bg-accent font-semibold rounded-full px-3 py-1 z-10">
-                Projet personnel
+                {t("works.personalBadge")}
               </span>
             )}
             {screenshot ? (
@@ -51,7 +52,7 @@ const ProjectCard = ({ index, slug, name, tagline, description, tags, badge, scr
 
           <div className="mt-5">
             <span className="inline-block text-primary bg-accent font-semibold text-[14px] px-5 py-2 rounded-lg hover:opacity-90 transition-opacity">
-              Voir le projet ↗
+              {t("works.viewProject")}
             </span>
           </div>
         </a>
@@ -61,25 +62,26 @@ const ProjectCard = ({ index, slug, name, tagline, description, tags, badge, scr
 };
 
 const Works = () => {
+  const { projects } = useContent();
+  const { t } = useTranslation();
+
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Mon travail</p>
-        <h2 className={styles.sectionHeadText}>Mes Projets.</h2>
+        <p className={styles.sectionSubText}>{t("works.eyebrow")}</p>
+        <h2 className={styles.sectionHeadText}>{t("works.title")}</h2>
       </motion.div>
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Dix projets, du travail client confidentiel aux projets personnels construits pour
-          couvrir toute ma stack fullstack. Chaque carte ouvre sa propre page de présentation
-          dans un nouvel onglet.
+          {t("works.intro")}
         </motion.p>
       </div>
       <div className="mt-16 flex flex-wrap gap-7 justify-center">
         {projects.map((project, index) => (
-          <ProjectCard key={project.slug} index={index} {...project} />
+          <ProjectCard key={project.slug} index={index} {...project} t={t} />
         ))}
       </div>
     </>
