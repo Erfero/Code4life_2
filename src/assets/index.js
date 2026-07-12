@@ -43,6 +43,9 @@ import shotBookingNextjs from "./projects/booking-nextjs.png";
 import shotBlogSeoNuxt from "./projects/blog-seo-nuxt.png";
 import shotUrlShortenerNestjs from "./projects/url-shortener-nestjs.png";
 import shotKanbanBoard from "./projects/kanban-board.png";
+import shotBoutiqueAurore from "./projects/boutique-aurore.png";
+import shotOpsCenter from "./projects/ops-center.png";
+import shotStudioMeridien from "./projects/studio-meridien.png";
 
 export {
   backend,
@@ -86,4 +89,7 @@ export {
   shotBlogSeoNuxt,
   shotUrlShortenerNestjs,
   shotKanbanBoard,
+  shotBoutiqueAurore,
+  shotOpsCenter,
+  shotStudioMeridien,
 };
