@@ -121,15 +121,15 @@ const technologies = [
 
 const experiences = [
   {
-    title: "SEO Web Writer",
-    company_name: "Savage Note · Paris",
-    icon: savageNoteBadge,
-    iconBg: "#c2f24e",
-    date: "Sept. 2019 – Jul. 2023",
+    title: "Fullstack Web Developer",
+    company_name: "Viip Interstis · Cotonou, Benin",
+    icon: viipBadge,
+    iconBg: "#0d120d",
+    date: "Feb. 2023 – Mar. 2025",
     points: [
-      "Wrote long-form articles (700–1500 words) optimized for organic search, for clients with varied needs.",
-      "Keyword research and editorial structuring to maximize Google rankings.",
-      "First contact with professional web work: the starting point that led me into development.",
+      "Designed an omnichannel application centralizing the company's social media accounts.",
+      "Developed a monitoring site and app for internal data management.",
+      "Built a management tool dedicated to the customer-support and developer teams.",
     ],
   },
   {
@@ -157,15 +157,15 @@ const experiences = [
     ],
   },
   {
-    title: "Fullstack Web Developer",
-    company_name: "Viip Interstis · Cotonou, Benin",
-    icon: viipBadge,
-    iconBg: "#0d120d",
-    date: "Feb. 2023 – Mar. 2025",
+    title: "SEO Web Writer",
+    company_name: "Savage Note · Paris",
+    icon: savageNoteBadge,
+    iconBg: "#c2f24e",
+    date: "Sept. 2019 – Jul. 2023",
     points: [
-      "Designed an omnichannel application centralizing the company's social media accounts.",
-      "Developed a monitoring site and app for internal data management.",
-      "Built a management tool dedicated to the customer-support and developer teams.",
+      "Wrote long-form articles (700–1500 words) optimized for organic search, for clients with varied needs.",
+      "Keyword research and editorial structuring to maximize Google rankings.",
+      "First contact with professional web work: the starting point that led me into development.",
     ],
   },
 ];

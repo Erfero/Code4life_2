@@ -130,15 +130,15 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Rédacteur Web SEO",
-    company_name: "Savage Note · Paris",
-    icon: savageNoteBadge,
-    iconBg: "#c2f24e",
-    date: "Sept. 2019 – Juil. 2023",
+    title: "Développeur Web Fullstack",
+    company_name: "Viip Interstis · Cotonou, Bénin",
+    icon: viipBadge,
+    iconBg: "#0d120d",
+    date: "Févr. 2023 – Mars 2025",
     points: [
-      "Rédaction d'articles de fond (700 à 1500 mots) optimisés pour le référencement naturel, pour des clients aux besoins variés.",
-      "Recherche de mots-clés et structuration éditoriale pour maximiser le classement sur Google.",
-      "Premier contact avec le web professionnel : le point de départ qui m'a mené vers le développement.",
+      "Conception d'une application omnicanale centralisant les réseaux sociaux de l'entreprise.",
+      "Développement d'un site et d'une application de monitoring pour la gestion des données internes.",
+      "Création d'un outil de gestion dédié aux équipes de téléconseillers et de développeurs.",
     ],
   },
   {
@@ -166,15 +166,15 @@ const experiences = [
     ],
   },
   {
-    title: "Développeur Web Fullstack",
-    company_name: "Viip Interstis · Cotonou, Bénin",
-    icon: viipBadge,
-    iconBg: "#0d120d",
-    date: "Févr. 2023 – Mars 2025",
+    title: "Rédacteur Web SEO",
+    company_name: "Savage Note · Paris",
+    icon: savageNoteBadge,
+    iconBg: "#c2f24e",
+    date: "Sept. 2019 – Juil. 2023",
     points: [
-      "Conception d'une application omnicanale centralisant les réseaux sociaux de l'entreprise.",
-      "Développement d'un site et d'une application de monitoring pour la gestion des données internes.",
-      "Création d'un outil de gestion dédié aux équipes de téléconseillers et de développeurs.",
+      "Rédaction d'articles de fond (700 à 1500 mots) optimisés pour le référencement naturel, pour des clients aux besoins variés.",
+      "Recherche de mots-clés et structuration éditoriale pour maximiser le classement sur Google.",
+      "Premier contact avec le web professionnel : le point de départ qui m'a mené vers le développement.",
     ],
   },
 ];

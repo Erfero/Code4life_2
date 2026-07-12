@@ -18,14 +18,14 @@
 }
 
 :root[data-theme="light"] {
-  --color-primary: 251 253 249;
-  --color-secondary: 88 97 82;
-  --color-tertiary: 241 245 235;
-  --color-accent: 92 138 20;
-  --color-accent-soft: 122 140 60;
-  --color-black-100: 235 239 229;
-  --color-black-200: 224 229 216;
-  --color-white-100: 20 26 18;
+  --color-primary: 255 255 255;
+  --color-secondary: 90 99 84;
+  --color-tertiary: 242 244 237;
+  --color-accent: 71 122 9;
+  --color-accent-soft: 99 122 43;
+  --color-black-100: 231 235 222;
+  --color-black-200: 219 224 208;
+  --color-white-100: 16 20 13;
 
   color-scheme: light;
 }
@@ -54,24 +54,6 @@ html, body {
   display: block;
 }
 
-.black-gradient {
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-:root[data-theme="light"] .black-gradient {
-  background: linear-gradient(to right, #ffffff, #eef2e6);
-}
-
 .accent-gradient {
   background: #c2f24e;
   background: linear-gradient(-90deg, #c2f24e 0%, rgba(18, 24, 18, 0) 100%);
@@ -83,7 +65,7 @@ html, body {
 }
 
 :root[data-theme="light"] .accent-gradient {
-  background: linear-gradient(-90deg, #5c8a14 0%, rgba(241, 245, 235, 0) 100%);
+  background: linear-gradient(-90deg, #477a09 0%, rgba(242, 244, 237, 0) 100%);
 }
 
 .accent-text-gradient {
@@ -95,8 +77,8 @@ html, body {
 }
 
 :root[data-theme="light"] .accent-text-gradient {
-  background: -webkit-linear-gradient(to top, #3f5c0f, #5c8a14);
-  background: linear-gradient(to top, #3f5c0f, #5c8a14);
+  background: -webkit-linear-gradient(to top, #33540a, #477a09);
+  background: linear-gradient(to top, #33540a, #477a09);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -110,17 +92,25 @@ html, body {
 }
 
 :root[data-theme="light"] .neutral-text-gradient {
-  background: -webkit-linear-gradient(to top, #4a5242, #7c8870);
-  background: linear-gradient(to top, #4a5242, #7c8870);
+  background: -webkit-linear-gradient(to top, #3f4636, #6b7660);
+  background: linear-gradient(to top, #3f4636, #6b7660);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+:root[data-theme="light"] .bg-tertiary {
+  box-shadow: 0 1px 2px rgba(20, 30, 12, 0.04), 0 4px 14px rgba(20, 30, 12, 0.06);
+}
+
+:root[data-theme="light"] .bg-black-100 {
+  box-shadow: 0 1px 2px rgba(20, 30, 12, 0.04);
 }
 
 /* Light-theme overrides for literal (non-tokenized) Tailwind utilities
    used throughout the components — higher specificity than the plain
    utility class lets us re-theme them without touching every file. */
 :root[data-theme="light"] .text-white {
-  color: #12180f;
+  color: #10140d;
 }
 
 :root[data-theme="light"] .border-white\/5 {
