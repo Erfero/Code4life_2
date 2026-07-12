@@ -35,6 +35,7 @@ import {
   shotBookingNextjs,
   shotBlogSeoNuxt,
   shotUrlShortenerNestjs,
+  shotKanbanBoard,
 } from "../assets";
 
 export const navLinks = [
@@ -554,6 +555,33 @@ const projects = [
       "Protection contre les codes réservés et les doublons",
     ],
     results: "En ligne et fonctionnel — crée un lien court et teste sa redirection.",
+  },
+  {
+    slug: "kanban-board",
+    name: "Tableau Kanban",
+    tagline: "React — gestion de tâches par glisser-déposer",
+    description:
+      "Application de gestion de tâches façon Trello : tableaux multiples, colonnes personnalisables, cartes avec priorité/étiquettes/échéance, glisser-déposer fluide, tout persisté en local.",
+    tags: [
+      { name: "react", color: "accent-text-gradient" },
+      { name: "javascript", color: "neutral-text-gradient" },
+      { name: "dnd", color: "accent-text-gradient" },
+    ],
+    badge: reactjs,
+    screenshot: shotKanbanBoard,
+    externalLink: "https://kanban-board-cyan-three.vercel.app",
+    isPersonal: true,
+    context:
+      "Projet personnel front-end pur pour démontrer une interaction complexe (glisser-déposer multi-colonnes) sans dépendre d'un backend : idéal pour un usage local ou comme brique à connecter à une API plus tard.",
+    role: "Développement front-end complet : architecture des données, drag-and-drop, persistance locale.",
+    stack: ["React", "dnd-kit", "Context API + useReducer", "localStorage", "Vercel"],
+    features: [
+      "Tableaux multiples, colonnes et cartes entièrement personnalisables",
+      "Glisser-déposer natif entre colonnes avec aperçu animé de la carte",
+      "Cartes avec description, priorité, étiquettes colorées et échéance",
+      "Sauvegarde automatique dans le navigateur, aucune donnée perdue au rechargement",
+    ],
+    results: "En ligne et fonctionnel — crée un tableau, ajoute des cartes et déplace-les entre les colonnes.",
   },
 ];
 

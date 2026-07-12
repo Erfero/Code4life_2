@@ -42,6 +42,7 @@ import shotEcommerceMern from "./projects/ecommerce-mern.png";
 import shotBookingNextjs from "./projects/booking-nextjs.png";
 import shotBlogSeoNuxt from "./projects/blog-seo-nuxt.png";
 import shotUrlShortenerNestjs from "./projects/url-shortener-nestjs.png";
+import shotKanbanBoard from "./projects/kanban-board.png";
 
 export {
   backend,
@@ -84,4 +85,5 @@ export {
   shotBookingNextjs,
   shotBlogSeoNuxt,
   shotUrlShortenerNestjs,
+  shotKanbanBoard,
 };
