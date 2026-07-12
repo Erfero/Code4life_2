@@ -6,7 +6,10 @@ function getInitialTheme() {
   if (typeof window === "undefined") return "dark";
   const stored = localStorage.getItem("c4l-theme");
   if (stored === "dark" || stored === "light") return stored;
-  return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  // Dark is the site's brand identity (colors extracted from the CV) — it's
+  // always the default for first-time visitors, regardless of OS preference.
+  // The toggle is an explicit override, not a system-preference follower.
+  return "dark";
 }
 
 export function ThemeProvider({ children }) {
