@@ -34,6 +34,7 @@ import {
   shotEcommerceMern,
   shotBookingNextjs,
   shotBlogSeoNuxt,
+  shotUrlShortenerNestjs,
 } from "../assets";
 
 export const navLinks = [
@@ -526,6 +527,33 @@ const projects = [
       "Pages prérendues au build (SSG) pour un chargement instantané",
     ],
     results: "En ligne et fonctionnel — consulte un article pour voir le rendu et les métadonnées SEO.",
+  },
+  {
+    slug: "url-shortener-nestjs",
+    name: "Raccourcisseur de liens",
+    tagline: "NestJS — API structurée avec stats de clics",
+    description:
+      "API de raccourcissement de liens avec redirection et comptage de clics en temps réel, construite avec l'architecture modulaire de NestJS.",
+    tags: [
+      { name: "nestjs", color: "accent-text-gradient" },
+      { name: "typescript", color: "neutral-text-gradient" },
+      { name: "mongodb", color: "accent-text-gradient" },
+    ],
+    badge: nestjs,
+    screenshot: shotUrlShortenerNestjs,
+    externalLink: "https://url-shortener-nestjs-livid.vercel.app",
+    isPersonal: true,
+    context:
+      "Projet personnel pour maîtriser NestJS et son architecture modulaire (contrôleurs, services, DTO validés par décorateurs) sur un cas simple mais complet : un raccourcisseur de liens avec suivi des clics.",
+    role: "Backend NestJS complet : modules, contrôleurs, validation, persistance MongoDB.",
+    stack: ["NestJS", "TypeScript", "MongoDB", "Mongoose", "Vercel"],
+    features: [
+      "Création de liens courts avec code personnalisé optionnel",
+      "Redirection avec comptage de clics en temps réel",
+      "Validation stricte des entrées via des DTO décorés (class-validator)",
+      "Protection contre les codes réservés et les doublons",
+    ],
+    results: "En ligne et fonctionnel — crée un lien court et teste sa redirection.",
   },
 ];
 

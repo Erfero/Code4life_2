@@ -41,6 +41,7 @@ import shotAppTempsReelFirebase from "./projects/app-temps-reel-firebase.png";
 import shotEcommerceMern from "./projects/ecommerce-mern.png";
 import shotBookingNextjs from "./projects/booking-nextjs.png";
 import shotBlogSeoNuxt from "./projects/blog-seo-nuxt.png";
+import shotUrlShortenerNestjs from "./projects/url-shortener-nestjs.png";
 
 export {
   backend,
@@ -82,4 +83,5 @@ export {
   shotEcommerceMern,
   shotBookingNextjs,
   shotBlogSeoNuxt,
+  shotUrlShortenerNestjs,
 };
