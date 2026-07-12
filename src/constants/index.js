@@ -32,6 +32,7 @@ import {
   shotApiLaravelGestion,
   shotAppTempsReelFirebase,
   shotEcommerceMern,
+  shotBookingNextjs,
 } from "../assets";
 
 export const navLinks = [
@@ -497,6 +498,33 @@ const projects = [
       "Vue admin protégée par clé d'accès listant toutes les réservations",
     ],
     results: "En ligne et fonctionnel — réserve un créneau de test pour voir le parcours complet.",
+  },
+  {
+    slug: "blog-seo-nuxt",
+    name: "Code4Life Insights",
+    tagline: "Nuxt.js — blog technique optimisé SEO",
+    description:
+      "Blog technique sur le développement web et le SEO : rendu statique, sitemap généré dynamiquement, JSON-LD, balises Open Graph sur chaque article.",
+    tags: [
+      { name: "nuxt", color: "accent-text-gradient" },
+      { name: "vuejs", color: "neutral-text-gradient" },
+      { name: "seo", color: "accent-text-gradient" },
+    ],
+    badge: nuxt,
+    screenshot: shotBlogSeoNuxt,
+    externalLink: "https://blog-seo-nuxt.vercel.app",
+    isPersonal: true,
+    context:
+      "Projet personnel pour mettre en pratique ma double compétence développeur/référenceur : un blog Nuxt 3 dont chaque page respecte les fondamentaux techniques du SEO, pas juste le contenu éditorial.",
+    role: "Fullstack Nuxt : contenu (Nuxt Content), génération du sitemap et des métadonnées, mise en page.",
+    stack: ["Nuxt 3", "Vue.js", "Nuxt Content", "TypeScript", "Vercel"],
+    features: [
+      "4 articles techniques réels sur le SEO et le développement web",
+      "Sitemap.xml et robots.txt générés dynamiquement à partir du contenu",
+      "Schéma JSON-LD Article et balises Open Graph sur chaque page",
+      "Pages prérendues au build (SSG) pour un chargement instantané",
+    ],
+    results: "En ligne et fonctionnel — consulte un article pour voir le rendu et les métadonnées SEO.",
   },
 ];
 

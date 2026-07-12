@@ -40,6 +40,7 @@ import shotApiLaravelGestion from "./projects/api-laravel-gestion.png";
 import shotAppTempsReelFirebase from "./projects/app-temps-reel-firebase.png";
 import shotEcommerceMern from "./projects/ecommerce-mern.png";
 import shotBookingNextjs from "./projects/booking-nextjs.png";
+import shotBlogSeoNuxt from "./projects/blog-seo-nuxt.png";
 
 export {
   backend,
@@ -80,4 +81,5 @@ export {
   shotAppTempsReelFirebase,
   shotEcommerceMern,
   shotBookingNextjs,
+  shotBlogSeoNuxt,
 };
