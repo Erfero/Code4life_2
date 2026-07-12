@@ -1,5 +1,8 @@
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { About, Contact, Experience, Resume, Hero, Navbar, Tech, Works, StarsCanvas, ProjectPage } from "./components";
+import { About, Contact, Experience, Resume, Hero, Navbar, Tech, Works, ProjectPage } from "./components";
+
+const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 
 const HomePage = () => (
   <div className="relative z-0 bg-primary">
@@ -14,7 +17,9 @@ const HomePage = () => (
     <Works />
     <div className="relative z-0">
       <Contact />
-      <StarsCanvas />
+      <Suspense fallback={null}>
+        <StarsCanvas />
+      </Suspense>
     </div>
   </div>
 );

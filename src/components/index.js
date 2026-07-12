@@ -1,4 +1,3 @@
-import { EarthCanvas, ComputersCanvas, StarsCanvas } from './canvas';
 import Hero from "./Hero";
 import Navbar from "./Navbar";
 import About from "./About";
@@ -8,6 +7,7 @@ import Resume from "./Resume";
 import Works from "./Works";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
+import SimpleLoader from "./SimpleLoader";
 import Logo from "./Logo";
 import ProjectPage from "./ProjectPage";
 
@@ -22,9 +22,7 @@ export {
   Works,
   Contact,
   CanvasLoader,
+  SimpleLoader,
   Logo,
   ProjectPage,
-  EarthCanvas,
-  ComputersCanvas,
-  StarsCanvas
 };

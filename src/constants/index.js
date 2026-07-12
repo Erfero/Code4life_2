@@ -182,11 +182,6 @@ const education = [
     school: "High-Five University · Bénin",
     date: "Depuis mars 2022 — 2 ans d'enseignement + 2 ans en entreprise",
   },
-  {
-    title: "Licence pro · Sciences Naturelles",
-    school: "FAST Bénin",
-    date: "2019 – 2021 — Biologie, chimie, géologie",
-  },
 ];
 
 const strengths = ["Communication", "Gestion de projet", "Souci du détail"];

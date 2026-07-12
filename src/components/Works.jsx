@@ -14,45 +14,47 @@ const ProjectCard = ({ index, slug, name, tagline, description, tags, badge, scr
         options={{ max: 25, scale: 1, speed: 450 }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
-        <div className="relative w-full h-[180px] rounded-2xl bg-accent-gradient flex items-center justify-center overflow-hidden">
-          {isPersonal && (
-            <span className="absolute top-3 left-3 text-[11px] text-primary bg-accent font-semibold rounded-full px-3 py-1 z-10">
-              Projet personnel
+        <a
+          href={`/projects/${slug}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block no-underline"
+        >
+          <div className="relative w-full h-[180px] rounded-2xl bg-accent-gradient flex items-center justify-center overflow-hidden">
+            {isPersonal && (
+              <span className="absolute top-3 left-3 text-[11px] text-primary bg-accent font-semibold rounded-full px-3 py-1 z-10">
+                Projet personnel
+              </span>
+            )}
+            {screenshot ? (
+              <img src={screenshot} alt={name} className="w-full h-full object-cover object-top" />
+            ) : badge === "logo" ? (
+              <Logo className="w-16 h-16" withBg={false} />
+            ) : (
+              <img src={badge} alt={name} className="w-16 h-16 rounded-2xl object-contain" />
+            )}
+          </div>
+
+          <div className="mt-5">
+            <h3 className="text-white font-heading font-bold text-[20px]">{name}</h3>
+            <p className="text-accent text-[13px] mt-1">{tagline}</p>
+            <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          </div>
+
+          <div className="mt-4 flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+                #{tag.name}
+              </p>
+            ))}
+          </div>
+
+          <div className="mt-5">
+            <span className="inline-block text-primary bg-accent font-semibold text-[14px] px-5 py-2 rounded-lg hover:opacity-90 transition-opacity">
+              Voir le projet ↗
             </span>
-          )}
-          {screenshot ? (
-            <img src={screenshot} alt={name} className="w-full h-full object-cover object-top" />
-          ) : badge === "logo" ? (
-            <Logo className="w-16 h-16" withBg={false} />
-          ) : (
-            <img src={badge} alt={name} className="w-16 h-16 rounded-2xl object-contain" />
-          )}
-        </div>
-
-        <div className="mt-5">
-          <h3 className="text-white font-heading font-bold text-[20px]">{name}</h3>
-          <p className="text-accent text-[13px] mt-1">{tagline}</p>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
-        </div>
-
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-              #{tag.name}
-            </p>
-          ))}
-        </div>
-
-        <div className="mt-5">
-          <a
-            href={`/projects/${slug}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-primary bg-accent font-semibold text-[14px] px-5 py-2 rounded-lg hover:opacity-90 transition-opacity"
-          >
-            Voir le projet ↗
-          </a>
-        </div>
+          </div>
+        </a>
       </Tilt>
     </motion.div>
   );

@@ -1,12 +1,14 @@
-import { useState, useRef } from "react";
+import { useState, useRef, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
+import SimpleLoader from "./SimpleLoader";
 import { slideIn } from "../utils/motion";
 import { contactInfo } from "../constants";
+
+const EarthCanvas = lazy(() => import("./canvas/Earth"));
 
 const MailIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth="1.8">
@@ -200,7 +202,9 @@ const Contact = () => {
       variants={slideIn('right', "tween", 0.2, 1)}
       className="xl:flex-[1.15] xl:h-auto md:h-[560px] h-[400px] rounded-2xl overflow-hidden border border-white/10 bg-tertiary"
       >
-        <EarthCanvas />
+        <Suspense fallback={<SimpleLoader />}>
+          <EarthCanvas />
+        </Suspense>
       </motion.div>
     </div>
   )
