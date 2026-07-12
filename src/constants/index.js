@@ -33,6 +33,7 @@ import {
   shotAppTempsReelFirebase,
   shotEcommerceMern,
   shotBookingNextjs,
+  shotBlogSeoNuxt,
 } from "../assets";
 
 export const navLinks = [
