@@ -9,11 +9,15 @@
       content="Erféro Keoula — Développeur Web Fullstack (Shopify, React, Node.js, WordPress). Code4Life : portfolio, projets et CV."
     />
     <title>Erféro Keoula — Développeur Web Fullstack | Code4Life</title>
-    <style>
-      html, body, #root {
-        background: #050705;
-      }
-    </style>
+    <link rel="preload" href="/desktop_pc/scene.bin" as="fetch" crossorigin="anonymous" />
+    <link rel="preload" href="/planet/scene.bin" as="fetch" crossorigin="anonymous" />
+    <script>
+      (function () {
+        var theme = localStorage.getItem("c4l-theme") === "light" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", theme);
+        document.documentElement.style.background = theme === "light" ? "#ffffff" : "#050705";
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
