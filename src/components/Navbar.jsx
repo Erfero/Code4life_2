@@ -92,6 +92,7 @@ const Navbar = () => {
           <li className="flex items-center gap-2 border-l border-white/15 pl-6 xl:pl-10">
             <button
               type="button"
+              data-testid="theme-toggle-desktop"
               onClick={toggleTheme}
               aria-label={t(theme === "dark" ? "theme.toggleToLight" : "theme.toggleToDark")}
               title={t(theme === "dark" ? "theme.toggleToLight" : "theme.toggleToDark")}
@@ -101,6 +102,7 @@ const Navbar = () => {
             </button>
             <button
               type="button"
+              data-testid="lang-toggle-desktop"
               onClick={toggleLanguage}
               aria-label="Toggle language"
               className="w-8 h-8 flex items-center justify-center rounded-full border border-white/15 text-secondary hover:text-accent hover:border-accent transition-colors text-[12px] font-heading font-bold"
@@ -112,6 +114,7 @@ const Navbar = () => {
         <div className="lg:hidden flex flex-1 justify-end items-center gap-3">
           <button
             type="button"
+            data-testid="theme-toggle-mobile"
             onClick={toggleTheme}
             aria-label={t(theme === "dark" ? "theme.toggleToLight" : "theme.toggleToDark")}
             className="w-8 h-8 flex items-center justify-center rounded-full border border-white/15 text-secondary"
@@ -120,6 +123,7 @@ const Navbar = () => {
           </button>
           <button
             type="button"
+            data-testid="lang-toggle-mobile"
             onClick={toggleLanguage}
             aria-label="Toggle language"
             className="w-8 h-8 flex items-center justify-center rounded-full border border-white/15 text-secondary text-[12px] font-heading font-bold"
@@ -128,6 +132,7 @@ const Navbar = () => {
           </button>
           <button
             type="button"
+            data-testid="nav-menu-toggle"
             aria-label={toggle ? "Fermer le menu" : "Ouvrir le menu"}
             className="w-[28px] h-[28px] flex items-center justify-center text-white cursor-pointer"
             onClick={() => setToggle(!toggle)}
